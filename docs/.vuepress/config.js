@@ -30,7 +30,7 @@ export default defineUserConfig({
         next: "Siguiente",
         selectLanguageName: "Español",
         navbar: [
-          '/es/', '/es/get-started', '/es/introduccion', '/es/guia', {
+          '/es/', '/es/get-started', '/es/introduccion', '/es/guia',"/es/playground", {
             text: "Text",
             children: ["/es/guia/descargar-plugin.md", "/es/guia/comenzar.md", "/es/guia/compartir-impresora.md"]
           }

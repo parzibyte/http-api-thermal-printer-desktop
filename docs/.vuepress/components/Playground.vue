@@ -1,6 +1,5 @@
 <script setup>
-const operaciones = [];
-import { useSiteData } from '@vuepress/client'
+import { useSiteLocaleData } from '@vuepress/client'
 import { ref, computed, onMounted } from 'vue'
 import MiInput from "./MiInput.vue"
 import MiBoton from "./MiBoton.vue"
@@ -8,6 +7,8 @@ import SelectSimple from "./SelectSimple.vue"
 import CustomTextarea from "./CustomTextarea.vue"
 const url = ref("http://localhost:8000")
 const licencia = ref("")
+import { useI18n } from 'vue-i18n';
+const i18n = useI18n();
 const operacionesDisponibles = [
     {
         "id": 1,
@@ -1066,21 +1067,24 @@ const operacionesDisponibles = [
 const busqueda = ref("");
 
 const operacionesFiltradas = computed(() => {
-
     if (busqueda.value === "") {
-
         return operacionesDisponibles;
     }
     const expresion = new RegExp(`${busqueda.value}.*`, "i");
     return operacionesDisponibles.filter(operacion => {
-        if (expresion.test(operacion.descripcion) || expresion.test(operacion.nombre)) {
-            return true;
+        if (esEspañol()) {
+            if (expresion.test(operacion.descripcion) || expresion.test(operacion.nombre)) {
+                return true;
+            }
+        } else {
+            if (expresion.test(operacion.descripcion_ingles) || expresion.test(operacion.nombre)) {
+                return true;
+            }
         }
         return false;
     })
 });
 const arregloDeOperaciones = ref([]);
-const siteData = useSiteData()
 const agregarOperacion = (operacion) => {
     const limpia = JSON.parse(JSON.stringify(operacion));
     arregloDeOperaciones.value.push(limpia);
@@ -1124,7 +1128,6 @@ const enviar = async () => {
     });
     respuestaHttp.value = await respuesta.json();
     deberiaMostrarAlerta.value = true;
-    console.log({ respuesta });
 
 }
 
@@ -1148,12 +1151,16 @@ const mensajeValidacionImpresora = computed(() => {
     if (impresoraSeleccionada.value) {
         return "";
     }
-    return "Selecciona tu impresora";
+    return i18n.t("seleccionaImpresora");
 });
 
 const refrescarImpresoras = async () => {
-    const respuesta = await fetch(url.value + "/impresoras")
-    impresoras.value = await respuesta.json();
+    try {
+        const respuesta = await fetch(url.value + "/impresoras")
+        impresoras.value = await respuesta.json();
+    } catch(e){
+        impresoras.value = [];
+    }
 }
 
 const eliminarOperacion = (indice) => {
@@ -1195,14 +1202,24 @@ const refrescarDetalles = async () => {
     }
 }
 
+const esEspañol = () => {
+    return i18n.locale.value === "es";
+}
+
 onMounted(() => {
+    const siteLocaleData = useSiteLocaleData();
+    if (siteLocaleData.value.lang.includes("es")) {
+        i18n.locale.value = "es";
+    } else {
+        i18n.locale.value = "en";
+
+    }
     const urlSearchParams = new URLSearchParams(window.location.search);
     const posibleNombreOperacion = urlSearchParams.get("operacion");
     if (posibleNombreOperacion) {
         const indice = operacionesDisponibles.findIndex(operacion => {
             return operacion.nombre === posibleNombreOperacion;
         });
-        console.log({indice});
         if (indice != -1) {
             agregarOperacion(operacionesDisponibles[indice]);
         }
@@ -1210,46 +1227,73 @@ onMounted(() => {
     refrescarDetalles();
     refrescarImpresoras();
 });
+
+
+const devolverDescripcionDeArgumento = (argumento) => {
+    if (esEspañol()) {
+        return argumento.descripcion;
+    } else {
+        return argumento.descripcion_ingles;
+
+    }
+}
+const devolverDescripcionDeOperacion = (operacion) => {
+    if (esEspañol()) {
+        return operacion.descripcion;
+    } else {
+        return operacion.descripcion_ingles;
+
+    }
+}
 </script>
 <template>
     <div class="flex flex-col">
         <div>
             <div class="bg-green-400 text-white p-2 rounded-md" v-if="detallesPlugin.plataforma === 'Desktop'">
-                <strong>Versión: </strong> {{ detallesPlugin.plataforma }}
+                <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }}
             </div>
-            <div class="bg-red-400 text-white p-2 rounded-md"
+            <div class="bg-red-500 text-white p-2 rounded-md"
                 v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
-                Plugin no se está ejecutando {{ mensajeErrorVersion }}
+                {{ $t("pluginNoDetectado") }} {{ mensajeErrorVersion }}
+                <br>
+                <a class="text-white" href="./descargar">{{ $t("guiaDescarga") }}</a>
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
-            <MiInput v-model="licencia" label="Licencia"></MiInput>
+            <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
             <SelectSimple :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
-                label="Selecciona tu impresora" :elementos="impresoras">
+                :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
+            <div class="bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
+                {{ $t("noHayImpresoras") }}
+                <br>
+                <a href="./compartir">{{ $t("guiaCompartirImpresoras") }}</a>
+                <br>
+                <MiBoton @click="refrescarImpresoras()" tipo="info">{{ $t("refrescarImpresoras") }}</MiBoton>
+            </div>
         </div>
     </div>
 
     <div class="flex flex-row">
         <div class="flex w-1/2 flex-col">
-            <p v-show="arregloDeOperaciones.length <= 0">Selecciona una operación de abajo</p>
+            <p v-show="arregloDeOperaciones.length <= 0">{{ $t("seleccionaUnaOperacion") }}</p>
             <div class="p-2 bg-gray-200 mb-1 rounded-md hover:bg-gray-300"
                 v-for="(operacion, indiceOperacion) in arregloDeOperaciones">
                 <div class="flex flex-row">
-                    <small class="break-all" :title="operacion.descripcion">
-
+                    <small class="break-all" :title="devolverDescripcionDeOperacion(operacion)">
                         <a href="#">
                             {{ operacion.nombre }}
                         </a>
                     </small>
                 </div>
-                <CustomTextarea v-model="argumento.ejemplo" :title="argumento.descripcion"
+                <CustomTextarea v-model="argumento.ejemplo" :title="devolverDescripcionDeArgumento(argumento)"
                     v-for="argumento in operacion.argumentos" :label="argumento.nombre + ' (' + argumento.tipo + ')'">
                 </CustomTextarea>
-                <MiBoton @click="eliminarOperacion(indiceOperacion)" tipo="danger">Eliminar</MiBoton>
+                <MiBoton @click="eliminarOperacion(indiceOperacion)" tipo="danger">{{ $t("eliminarOperacion") }}
+                </MiBoton>
             </div>
         </div>
         <div class="flex w-1/2 flex-col p-1">
-            <MiBoton @click="enviar" :disabled="deberiaDeshabilitarBoton">Enviar</MiBoton>
+            <MiBoton @click="enviar" :disabled="deberiaDeshabilitarBoton">{{ $t("hacerPeticion") }}</MiBoton>
             <div class="bg-yellow-500 text-white p-2 rounded-md" v-show="deberiaMostrarAlerta">
                 {{ respuestaHttp }}
             </div>
@@ -1259,11 +1303,8 @@ onMounted(() => {
         </div>
 
     </div>
-    <div class="flex flex-row">
-        <strong>{{ siteData }}</strong>
-    </div>
     <div class="flex flex-col">
-        <MiInput v-model="busqueda" :label="'Buscar'"></MiInput>
+        <MiInput v-model="busqueda" :label="$t('buscar')"></MiInput>
         <div>
             <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
                 v-for="(operacion, indice) in operacionesFiltradas">
@@ -1271,7 +1312,7 @@ onMounted(() => {
                     <a href="#">
                         {{ operacion.nombre }}
                     </a>
-                    <small class="text-xs">: {{ operacion.descripcion }}</small>
+                    <small class="text-xs">: {{ devolverDescripcionDeOperacion(operacion) }}</small>
                 </p>
             </div>
         </div>
