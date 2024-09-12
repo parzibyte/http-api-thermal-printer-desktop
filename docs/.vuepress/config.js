@@ -1,7 +1,6 @@
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   base: "/dist/",
@@ -18,8 +17,8 @@ export default defineUserConfig({
     },
   },
   plugins: [
-    //registerComponentsPlugin(),
   ],
+
 
   title: 'Plugin para Impresora térmica',
   description: 'Controla tu impresora térmica con una API HTTP',
@@ -52,7 +51,7 @@ export default defineUserConfig({
       "/": {
         selectLanguageName: "English",
         navbar: [
-          '/', '/get-started', '/introduccion', '/guia', {
+          '/', '/get-started', '/introduccion', '/guia', "/playground", {
             text: "Text",
             children: ["/guia/descargar-plugin.md", "/guia/comenzar.md", "/guia/compartir-impresora.md"]
           }
@@ -76,4 +75,5 @@ export default defineUserConfig({
   }),
 
   bundler: viteBundler(),
+  
 })
