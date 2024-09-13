@@ -20,6 +20,8 @@ const i18n = createI18n({
       noHayImpresoras: "No se detectaron impresoras",
       guiaCompartirImpresoras: "Guía de instalación",
       refrescarImpresoras: "Volver a cargar lista",
+      expandir: "Expandir",
+      contraer: "Contraer",
     },
     en: {
       versionPlugin: 'Plugin running with platform',
@@ -34,6 +36,8 @@ const i18n = createI18n({
       noHayImpresoras: "No printers detected",
       guiaCompartirImpresoras: "Install printer guide",
       refrescarImpresoras: "Refresh printer list",
+      expandir: "Show info",
+      contraer: "Hide info",
     }
   }
 })
