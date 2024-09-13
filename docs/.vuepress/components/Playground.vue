@@ -9,7 +9,7 @@ const url = ref("http://localhost:8000")
 const licencia = ref("")
 import { useI18n } from 'vue-i18n';
 const i18n = useI18n();
-import { operacionesDisponibles } from './operaciones'
+import { operacionesDisponibles } from '../../../listaCompletaDeOperaciones.js'
 const busqueda = ref("");
 
 const operacionesFiltradas = computed(() => {

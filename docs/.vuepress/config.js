@@ -7,13 +7,13 @@ export default defineUserConfig({
   locales: {
     "/es/": {
       lang: "es-ES",
-      title: "En español",
-      description: "API HTTP impresora térmica",
+      title: "Plugin comandos ESC POS impresora térmica",
+      description: "Documentación de la API HTTP REST para controlar cualquier impresora térmica conectada por cable USB y enviarle comandos ESC POS desde cualquier lenguaje de programación",
     },
     "/": {
       lang: "en-US",
-      title: "En inglés",
-      description: "HTTP thermal plugin API"
+      title: "ESC POS thermal printer plugin docs",
+      description: "HTTP REST API docs to control any thermal printer connected by USB cable and send ESC POS commands to it from any programming language"
     },
   },
   plugins: [
@@ -30,12 +30,88 @@ export default defineUserConfig({
         next: "Siguiente",
         selectLanguageName: "Español",
         navbar: [
-          '/es/', '/es/get-started', '/es/introduccion', '/es/guia',"/es/playground", {
+          '/es/', '/es/get-started', '/es/introduccion', '/es/guia', "/es/playground",
+          {
+            text: "Operaciones disponibles",
+            children: [
+              '/es/esc-pos/iniciar.md',
+              '/es/esc-pos/escribir-texto.md',
+              '/es/esc-pos/pulso-(abrir-cajon).md',
+              '/es/esc-pos/corte-parcial.md',
+              '/es/esc-pos/cortar-papel.md',
+              '/es/esc-pos/avanzar-papel.md',
+              '/es/esc-pos/texto-segun-pagina-de-codigos.md',
+              '/es/esc-pos/cambiar-alineacion.md',
+              '/es/esc-pos/cambiar-tamano-de-fuente.md',
+              '/es/esc-pos/cambiar-subrayado.md',
+              '/es/esc-pos/cambiar-enfatizado.md',
+              '/es/esc-pos/impresion-al-reves.md',
+              '/es/esc-pos/rotar-90-grados.md',
+              '/es/esc-pos/impresion-inversa.md',
+              '/es/esc-pos/establecer-fuente.md',
+              '/es/esc-pos/habilitar-caracteres-personalizados.md',
+              '/es/esc-pos/deshabilitar-caracteres-personalizados.md',
+              '/es/esc-pos/definir-caracter-personalizado.md',
+              '/es/esc-pos/imagen-local.md',
+              '/es/esc-pos/imagen-de-internet.md',
+              '/es/esc-pos/html.md',
+              '/es/esc-pos/pagina-web.md',
+              '/es/esc-pos/imagen-en-base64.md',
+              '/es/esc-pos/codigo-de-barras-code-39.md',
+              '/es/esc-pos/codigo-de-barras-code-93.md',
+              '/es/esc-pos/codigo-de-barras-pdf-417.md',
+              '/es/esc-pos/codigo-de-barras-upc-a.md',
+              '/es/esc-pos/codigo-de-barras-upc-e.md',
+              '/es/esc-pos/codigo-de-barras-ean.md',
+              '/es/esc-pos/codigo-de-barras-ean-8.md',
+              '/es/esc-pos/codigo-de-barras-itf.md',
+              '/es/esc-pos/codigo-de-barras-codabar.md',
+              '/es/esc-pos/codigo-de-barras-code-128.md',
+              '/es/esc-pos/codigo-qr.md'
+            ],
+          },
+          {
             text: "Text",
             children: ["/es/guia/descargar-plugin.md", "/es/guia/comenzar.md", "/es/guia/compartir-impresora.md"]
           }
         ],
         sidebar: {
+          "/es/esc-pos/": [
+            '/es/esc-pos/iniciar.md',
+            '/es/esc-pos/escribir-texto.md',
+            '/es/esc-pos/pulso-(abrir-cajon).md',
+            '/es/esc-pos/corte-parcial.md',
+            '/es/esc-pos/cortar-papel.md',
+            '/es/esc-pos/avanzar-papel.md',
+            '/es/esc-pos/texto-segun-pagina-de-codigos.md',
+            '/es/esc-pos/cambiar-alineacion.md',
+            '/es/esc-pos/cambiar-tamano-de-fuente.md',
+            '/es/esc-pos/cambiar-subrayado.md',
+            '/es/esc-pos/cambiar-enfatizado.md',
+            '/es/esc-pos/impresion-al-reves.md',
+            '/es/esc-pos/rotar-90-grados.md',
+            '/es/esc-pos/impresion-inversa.md',
+            '/es/esc-pos/establecer-fuente.md',
+            '/es/esc-pos/habilitar-caracteres-personalizados.md',
+            '/es/esc-pos/deshabilitar-caracteres-personalizados.md',
+            '/es/esc-pos/definir-caracter-personalizado.md',
+            '/es/esc-pos/imagen-local.md',
+            '/es/esc-pos/imagen-de-internet.md',
+            '/es/esc-pos/html.md',
+            '/es/esc-pos/pagina-web.md',
+            '/es/esc-pos/imagen-en-base64.md',
+            '/es/esc-pos/codigo-de-barras-code-39.md',
+            '/es/esc-pos/codigo-de-barras-code-93.md',
+            '/es/esc-pos/codigo-de-barras-pdf-417.md',
+            '/es/esc-pos/codigo-de-barras-upc-a.md',
+            '/es/esc-pos/codigo-de-barras-upc-e.md',
+            '/es/esc-pos/codigo-de-barras-ean.md',
+            '/es/esc-pos/codigo-de-barras-ean-8.md',
+            '/es/esc-pos/codigo-de-barras-itf.md',
+            '/es/esc-pos/codigo-de-barras-codabar.md',
+            '/es/esc-pos/codigo-de-barras-code-128.md',
+            '/es/esc-pos/codigo-qr.md'
+          ],
           "/es/guia/": [
             {
               text: "TExtttt",
@@ -51,12 +127,88 @@ export default defineUserConfig({
       "/": {
         selectLanguageName: "English",
         navbar: [
-          '/', '/get-started', '/introduccion', '/guia', "/playground", {
+          '/', '/get-started', '/introduccion', '/guia', "/playground",
+          {
             text: "Text",
             children: ["/guia/descargar-plugin.md", "/guia/comenzar.md", "/guia/compartir-impresora.md"]
+          },
+          {
+            text: "Available ESC POS operations",
+            children: [
+              '/esc-pos/init.md',
+              '/esc-pos/write-text.md',
+              '/esc-pos/pulse-(open-cash-drawer).md',
+              '/esc-pos/partial-cut.md',
+              '/esc-pos/paper-cut.md',
+              '/esc-pos/feed-paper.md',
+              '/esc-pos/text-with-charcode-page.md',
+              '/esc-pos/set-justification.md',
+              '/esc-pos/change-font-size.md',
+              '/esc-pos/set-underline.md',
+              '/esc-pos/set-bold-text.md',
+              '/esc-pos/upside-down-print.md',
+              '/esc-pos/90-degrees-rotation.md',
+              '/esc-pos/inverse-mode-printing.md',
+              '/esc-pos/set-font.md',
+              '/esc-pos/enable-custom-characters.md',
+              '/esc-pos/disable-custom-characters.md',
+              '/esc-pos/define-custom-character.md',
+              '/esc-pos/filesystem-image.md',
+              '/esc-pos/internet-image.md',
+              '/esc-pos/html.md',
+              '/esc-pos/webpage.md',
+              '/esc-pos/base64-image.md',
+              '/esc-pos/code-39-barcode.md',
+              '/esc-pos/code-93-barcode.md',
+              '/esc-pos/pdf-417-barcode.md',
+              '/esc-pos/upc-a-barcode.md',
+              '/esc-pos/upc-e-barcode.md',
+              '/esc-pos/ean-barcode.md',
+              '/esc-pos/ean-8-barcode.md',
+              '/esc-pos/2of5-itf-barcode.md',
+              '/esc-pos/codabar-barcode.md',
+              '/esc-pos/code-128-barcode.md',
+              '/esc-pos/qr-code.md'
+            ],
           }
         ],
         sidebar: {
+          "/esc-pos/": [
+            '/esc-pos/init.md',
+            '/esc-pos/write-text.md',
+            '/esc-pos/pulse-(open-cash-drawer).md',
+            '/esc-pos/partial-cut.md',
+            '/esc-pos/paper-cut.md',
+            '/esc-pos/feed-paper.md',
+            '/esc-pos/text-with-charcode-page.md',
+            '/esc-pos/set-justification.md',
+            '/esc-pos/change-font-size.md',
+            '/esc-pos/set-underline.md',
+            '/esc-pos/set-bold-text.md',
+            '/esc-pos/upside-down-print.md',
+            '/esc-pos/90-degrees-rotation.md',
+            '/esc-pos/inverse-mode-printing.md',
+            '/esc-pos/set-font.md',
+            '/esc-pos/enable-custom-characters.md',
+            '/esc-pos/disable-custom-characters.md',
+            '/esc-pos/define-custom-character.md',
+            '/esc-pos/filesystem-image.md',
+            '/esc-pos/internet-image.md',
+            '/esc-pos/html.md',
+            '/esc-pos/webpage.md',
+            '/esc-pos/base64-image.md',
+            '/esc-pos/code-39-barcode.md',
+            '/esc-pos/code-93-barcode.md',
+            '/esc-pos/pdf-417-barcode.md',
+            '/esc-pos/upc-a-barcode.md',
+            '/esc-pos/upc-e-barcode.md',
+            '/esc-pos/ean-barcode.md',
+            '/esc-pos/ean-8-barcode.md',
+            '/esc-pos/2of5-itf-barcode.md',
+            '/esc-pos/codabar-barcode.md',
+            '/esc-pos/code-128-barcode.md',
+            '/esc-pos/qr-code.md'
+          ],
           "/guia/": [
             {
               text: "English",
@@ -75,5 +227,5 @@ export default defineUserConfig({
   }),
 
   bundler: viteBundler(),
-  
+
 })
