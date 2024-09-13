@@ -22,6 +22,7 @@ const i18n = createI18n({
       refrescarImpresoras: "Volver a cargar lista",
       expandir: "Expandir",
       contraer: "Contraer",
+      nombreOperacion: "Nombre de operación",
     },
     en: {
       versionPlugin: 'Plugin running with platform',
@@ -38,6 +39,7 @@ const i18n = createI18n({
       refrescarImpresoras: "Refresh printer list",
       expandir: "Show info",
       contraer: "Hide info",
+      nombreOperacion: "Operation's name",
     }
   }
 })

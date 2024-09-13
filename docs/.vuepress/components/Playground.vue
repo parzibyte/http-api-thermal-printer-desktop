@@ -235,6 +235,7 @@ const devolverDescripcionDeOperacion = (operacion) => {
                 v-for="(operacion, indiceOperacion) in arregloDeOperaciones">
                 <div class="flex flex-col">
                     <small class="break-all" :title="devolverDescripcionDeOperacion(operacion)">
+                        {{ $t("nombreOperacion") }}:
                         <a href="#">
                             {{ operacion.nombre }}
                         </a>
@@ -264,7 +265,7 @@ const devolverDescripcionDeOperacion = (operacion) => {
 
     </div>
     <div class="flex flex-col">
-        <MiInput v-model="busqueda" :label="$t('buscar')"></MiInput>
+        <MiInput type="search" v-model="busqueda" :label="$t('buscar')"></MiInput>
         <div>
             <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
                 v-for="(operacion, indice) in operacionesFiltradas">
