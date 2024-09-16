@@ -23,6 +23,9 @@ const i18n = createI18n({
       expandir: "Expandir",
       contraer: "Contraer",
       nombreOperacion: "Nombre de operación",
+      compartir: "Compartir",
+      copiado: "Copiado",
+      copiarManualmente: "Por favor copia el enlace",
     },
     en: {
       versionPlugin: 'Plugin running with platform',
@@ -40,6 +43,9 @@ const i18n = createI18n({
       expandir: "Show info",
       contraer: "Hide info",
       nombreOperacion: "Operation's name",
+      compartir: "Share",
+      copiado: "Copied to clibpoard",
+      copiarManualmente: "Please copy link",
     }
   }
 })

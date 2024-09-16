@@ -1,4 +1,5 @@
 <script setup>
+import { encode, decode } from 'js-base64';
 import { useSiteLocaleData } from '@vuepress/client'
 import { ref, computed, onMounted } from 'vue'
 import MiInput from "./MiInput.vue"
@@ -31,9 +32,19 @@ const operacionesFiltradas = computed(() => {
     })
 });
 const arregloDeOperaciones = ref([]);
-const agregarOperacion = (operacion) => {
+const agregarOperacion = (operacion, argumentos = []) => {
     const limpia = JSON.parse(JSON.stringify(operacion));
     limpia.expandida = false;
+    for (let i = 0; i < limpia.argumentos.length; i++) {
+        if (esEspañol()) {
+            limpia.argumentos[i].valor = limpia.argumentos[i].ejemplo;
+        } else {
+            limpia.argumentos[i].valor = limpia.argumentos[i].ejemplo_ingles;
+        }
+    }
+    for (let i = 0; i < argumentos.length; i++) {
+        limpia.argumentos[i].valor = argumentos[i].valor;
+    }
     arregloDeOperaciones.value.push(limpia);
 }
 
@@ -50,16 +61,15 @@ const obtenerJsonResultante = computed(() => {
                 nombre: operacion.nombre,
                 argumentos: operacion.argumentos.map(argumento => {
                     if (argumento.tipo === "float64") {
-                        return parseFloat(argumento.ejemplo);
+                        return parseFloat(argumento.valor);
                     }
-
                     if (argumento.tipo === "bool") {
-                        if (argumento.ejemplo === "false") {
+                        if (argumento.valor === "false") {
                             return false;
                         }
-                        return Boolean(argumento.ejemplo);
+                        return Boolean(argumento.valor);
                     }
-                    return argumento.ejemplo;
+                    return argumento.valor;
                 })
             };
         }),
@@ -162,15 +172,41 @@ onMounted(() => {
 
     }
     const urlSearchParams = new URLSearchParams(window.location.search);
-    const posibleNombreOperacion = urlSearchParams.get("operacion");
-    if (posibleNombreOperacion) {
-        const indice = operacionesDisponibles.findIndex(operacion => {
-            return operacion.nombre === posibleNombreOperacion;
-        });
-        if (indice != -1) {
-            agregarOperacion(operacionesDisponibles[indice]);
+    const posibleArreglo = urlSearchParams.get("operaciones");
+    if (posibleArreglo) {
+        try {
+            const operacionesDecodificadas = JSON.parse(decode(posibleArreglo));
+            for (const operacion of operacionesDecodificadas) {
+                const posibleIndice = operacionesDisponibles.findIndex(operacionExistente => {
+                    if (operacion.nombre === operacionExistente.nombre) {
+                        return true;
+                    }
+                    return false;
+                })
+                if (posibleIndice !== -1) {
+                    agregarOperacion(operacionesDisponibles[posibleIndice], operacion.argumentos);
+                }
+            }
+            console.log({ operacionesDecodificadas });
+        } catch (e) {
+            console.log({ posibleArreglo });
+
+            console.log(e);
+
+
+        }
+    } else {
+        const posibleNombreOperacion = urlSearchParams.get("operacion");
+        if (posibleNombreOperacion) {
+            const indice = operacionesDisponibles.findIndex(operacion => {
+                return operacion.nombre === posibleNombreOperacion;
+            });
+            if (indice != -1) {
+                agregarOperacion(operacionesDisponibles[indice]);
+            }
         }
     }
+
     refrescarDetalles();
     refrescarImpresoras();
 });
@@ -200,6 +236,29 @@ const devolverDescripcionDeOperacion = (operacion) => {
 
     }
 }
+
+const estaCopiando = ref(false);
+const etiquetaParaBotonCompartir = computed(() => {
+    if (estaCopiando.value) {
+        return i18n.t("copiado");
+    } else {
+        return i18n.t("compartir");
+    }
+});
+
+const compartir = async () => {
+    const operacionesBase64 = encodeURIComponent(encode(JSON.stringify(arregloDeOperaciones.value)));
+    const texto = window.location.origin + window.location.pathname + "?operaciones=" + operacionesBase64;
+    try {
+        await navigator.clipboard.writeText(texto);
+        estaCopiando.value = true;
+        await sleep(1000);
+        estaCopiando.value = false;
+    } catch (e) {
+        prompt(i18n.t("copiarManualmente"), texto);
+    }
+}
+
 </script>
 <template>
     <div class="flex flex-col">
@@ -245,7 +304,7 @@ const devolverDescripcionDeOperacion = (operacion) => {
                     <MiBoton @click="operacion.expandida = true" v-else>{{ $t("expandir") }}</MiBoton>
                     <small v-show="operacion.expandida">{{ devolverDescripcionDeOperacion(operacion) }}</small>
                 </div>
-                <CustomTextarea v-model="argumento.ejemplo" :title="devolverDescripcionDeArgumento(argumento)"
+                <CustomTextarea v-model="argumento.valor" :title="devolverDescripcionDeArgumento(argumento)"
                     v-for="(argumento, indiceArgumento) in operacion.argumentos"
                     :label="devolverLabel(argumento, indiceArgumento)">
                 </CustomTextarea>
@@ -254,7 +313,11 @@ const devolverDescripcionDeOperacion = (operacion) => {
             </div>
         </div>
         <div class="flex w-1/2 flex-col p-1">
-            <MiBoton @click="enviar" :disabled="deberiaDeshabilitarBoton">{{ $t("hacerPeticion") }}</MiBoton>
+            <div class="flex flex-row">
+                <MiBoton @click="enviar" :disabled="deberiaDeshabilitarBoton">{{ $t("hacerPeticion") }}</MiBoton>
+                <MiBoton @click="compartir" :disabled="deberiaDeshabilitarBoton">{{ etiquetaParaBotonCompartir }}
+                </MiBoton>
+            </div>
             <div class="bg-yellow-500 text-white p-2 rounded-md" v-show="deberiaMostrarAlerta">
                 {{ respuestaHttp }}
             </div>
