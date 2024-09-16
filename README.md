@@ -11,3 +11,16 @@ Modo producción:
 
 
 `npx tailwindcss -i ./docs/.vuepress/styles/entrada.css -o ./docs/.vuepress/styles/estilos.css  --minify`
+
+# Después de clonar
+
+Versión de Node probada:
+```
+C:\Windows\system32>node -v
+v20.15.1
+```
+
+1. `npm install`
+2. `npm run docs:dev`
+
+En otra terminal ejecutar Tailwind
