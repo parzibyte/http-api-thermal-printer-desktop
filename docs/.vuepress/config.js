@@ -127,11 +127,16 @@ export default defineUserConfig({
       "/": {
         selectLanguageName: "English",
         navbar: [
-          '/', '/introduction', '/api-description', "/playground", "/compatible-printers",
+          '/',
           {
             text: "Guide",
-            children: ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md", ]
+            children: ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",]
           },
+          {
+            text: "API description",
+            children: ["/api/introduction.md", "/api/print.md", "/api/get-printers.md", "/api/version-ping.md", "/api/forward.md", "/api/stop.md",],
+          },
+
           {
             text: "Available ESC POS operations",
             children: [
@@ -170,7 +175,9 @@ export default defineUserConfig({
               '/esc-pos/code-128-barcode.md',
               '/esc-pos/qr-code.md'
             ],
-          }
+          },
+          "/playground",
+          "/compatible-printers",
         ],
         sidebar: {
           "/esc-pos/": [
@@ -209,7 +216,10 @@ export default defineUserConfig({
             '/esc-pos/code-128-barcode.md',
             '/esc-pos/qr-code.md'
           ],
-          "/guide/": ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",]
+          "/guide/": ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",],
+          "/api/": [
+            "/api/introduction.md", "/api/print.md", "/api/get-printers.md", "/api/version-ping.md", "/api/forward.md", "/api/stop.md",
+          ],
         }
       }
     },

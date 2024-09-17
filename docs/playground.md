@@ -1,5 +1,4 @@
-
 # Playground
-
-Here you can
-<Playground nombreOperacion='Iniciar'/>
+Here you can test every operation and see generated
+code. 
+<Playground />

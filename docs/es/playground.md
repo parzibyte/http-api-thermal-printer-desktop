@@ -1,4 +1,6 @@
 # Playground
 
-Aquí puedes
+Aquí puedes probar todas las operaciones y
+ver el código generado
+
 <Playground/>

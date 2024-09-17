@@ -277,14 +277,14 @@ const enlaceCompartirImpresora = () => {
     if (esEspañol()) {
         return "";
     } else {
-        return "./install-share-printer.html";
+        return "./guide/install-share-printer.html";
     }
 }
 const enlaceDescargarPlugin = () => {
     if (esEspañol()) {
         return "";
     } else {
-        return "./download.html";
+        return "./guide/download.html";
     }
 }
 
