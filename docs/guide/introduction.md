@@ -19,7 +19,7 @@ printers such as image printing supporting algorithms, barcodes,
 qr codes, dithering, text and even HTML.
 
 
-You can design any receipt with the Ticket designer or print
+You can design any receipt with the [Ticket designer](https://parzibyte.me/apps/ticket-designer/#/) or print
 programatically
 
 ## How it works

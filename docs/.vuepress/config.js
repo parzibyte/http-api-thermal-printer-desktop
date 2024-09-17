@@ -12,8 +12,8 @@ export default defineUserConfig({
     },
     "/": {
       lang: "en-US",
-      title: "ESC POS thermal printer plugin docs",
-      description: "HTTP REST API docs to control any thermal printer connected by USB cable and send ESC POS commands to it from any programming language"
+      title: "HTTP to ESC POS  plugin",
+      description: "HTTP REST API docs to convert JSON request to ESC POS"
     },
   },
   plugins: [
@@ -223,7 +223,8 @@ export default defineUserConfig({
         }
       }
     },
-    lastUpdatedText: "AAAAAAAA",
+    lastUpdatedText: "Last updated",
+    contributors: false,
     logo: '/images/header.jpg',
   }),
 
