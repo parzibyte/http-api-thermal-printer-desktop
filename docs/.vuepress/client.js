@@ -44,7 +44,7 @@ const i18n = createI18n({
       contraer: "Hide info",
       nombreOperacion: "Operation's name",
       compartir: "Share",
-      copiado: "Copied to clibpoard",
+      copiado: "Copied to clipboard",
       copiarManualmente: "Please copy link",
     }
   }
