@@ -12,7 +12,7 @@ import { useI18n } from 'vue-i18n';
 const i18n = useI18n();
 import { operacionesDisponibles } from '../../../listaCompletaDeOperaciones.js'
 const busqueda = ref("");
-const props = defineProps(['nombreOperacion'])
+const props = defineProps(['nombreOperacion', 'ocultarOperacionesDisponibles'])
 
 const operacionesFiltradas = computed(() => {
     if (busqueda.value === "") {
@@ -183,6 +183,9 @@ onMounted(() => {
     } else {
         i18n.locale.value = "en";
     }
+    if (props.ocultarOperacionesDisponibles === true) {
+        deberiaMostrarListaCompleta.value = false;
+    }
 
     if (props.nombreOperacion) {
         agregarOperacionPorNombre(props.nombreOperacion);
@@ -270,7 +273,22 @@ const compartir = async () => {
         prompt(i18n.t("copiarManualmente"), texto);
     }
 }
+const enlaceCompartirImpresora = () => {
+    if (esEspañol()) {
+        return "";
+    } else {
+        return "./install-share-printer.html";
+    }
+}
+const enlaceDescargarPlugin = () => {
+    if (esEspañol()) {
+        return "";
+    } else {
+        return "./download.html";
+    }
+}
 
+const deberiaMostrarListaCompleta = ref(true);
 </script>
 <template>
     <div class="flex flex-col">
@@ -282,7 +300,7 @@ const compartir = async () => {
                 v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
                 {{ $t("pluginNoDetectado") }} {{ mensajeErrorVersion }}
                 <br>
-                <a class="text-white" href="./descargar">{{ $t("guiaDescarga") }}</a>
+                <a class="text-white" :href="enlaceDescargarPlugin()">{{ $t("guiaDescarga") }}</a>
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
             <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
@@ -292,7 +310,7 @@ const compartir = async () => {
             <div class="bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
                 {{ $t("noHayImpresoras") }}
                 <br>
-                <a href="./compartir">{{ $t("guiaCompartirImpresoras") }}</a>
+                <a :href="enlaceCompartirImpresora()">{{ $t("guiaCompartirImpresoras") }}</a>
                 <br>
                 <MiBoton @click="refrescarImpresoras()" tipo="info">{{ $t("refrescarImpresoras") }}</MiBoton>
             </div>
@@ -340,18 +358,26 @@ const compartir = async () => {
 
     </div>
     <div class="flex flex-col">
-        <MiInput type="search" v-model="busqueda" :label="$t('buscar')"></MiInput>
-        <div>
-            <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
-                v-for="(operacion, indice) in operacionesFiltradas">
-                <p>
-                    <a href="#">
-                        {{ operacion.nombre }}
-                    </a>
-                    <small class="text-xs">: {{ devolverDescripcionDeOperacion(operacion) }}</small>
-                </p>
-            </div>
+        <div class="flex flex-col">
+            <MiBoton @click="deberiaMostrarListaCompleta = true" v-if="!deberiaMostrarListaCompleta">{{
+                $t("mostrarOperacionesDisponibles") }}</MiBoton>
+            <MiBoton @click="deberiaMostrarListaCompleta = false" v-if="deberiaMostrarListaCompleta">{{
+                $t("ocultarOperacionesDisponibles") }}</MiBoton>
         </div>
 
+        <div class="flex flex-col" v-show="deberiaMostrarListaCompleta">
+            <MiInput type="search" v-model="busqueda" :label="$t('buscar')"></MiInput>
+            <div>
+                <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
+                    v-for="(operacion, indice) in operacionesFiltradas">
+                    <p>
+                        <a href="#">
+                            {{ operacion.nombre }}
+                        </a>
+                        <small class="text-xs">: {{ devolverDescripcionDeOperacion(operacion) }}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>

@@ -5,6 +5,11 @@
 Enable or disable  upside down print
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerImpresionAlReves)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerImpresionAlReves)
 
-<Playground nombreOperacion="EstablecerImpresionAlReves"/>
+<Playground nombreOperacion="EstablecerImpresionAlReves" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

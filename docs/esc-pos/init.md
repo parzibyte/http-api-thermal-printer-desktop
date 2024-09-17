@@ -5,6 +5,11 @@
 Initialize printer.Clean the data in the buffer and restart the printer to the state it was when it was turned on. In some printers it is recommended to invoke this function before and after printing images.
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=Iniciar)
 
 ## Arguments
@@ -36,7 +41,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Iniciar)
 
-<Playground nombreOperacion="Iniciar"/>
+<Playground nombreOperacion="Iniciar" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

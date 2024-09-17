@@ -5,9 +5,9 @@
 Inicializar impresora. Limpia los datos en el búfer y reinicia la impresora al modo que estaba en efecto cuando fue encendida. En algunas impresoras es recomendado invocar esta función antes y después de imprimir imágenes.
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Iniciar)
 
-<Playground nombreOperacion="Iniciar"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=Iniciar)
 
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
@@ -38,7 +38,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Iniciar)
-<Playground nombreOperacion="Iniciar"/>
+<Playground nombreOperacion="Iniciar" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

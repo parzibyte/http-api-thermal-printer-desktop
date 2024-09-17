@@ -5,6 +5,11 @@
 Allows you to write diacritic text. You have to specify the page number (according to the printer) and the Character Code Page for ICONV. It is suggested to try every combination if it does not work at first. This function has no effect if the used plugin version is the version that has no iconv
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
 ## Arguments
@@ -76,7 +81,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
-<Playground nombreOperacion="TextoSegunPaginaDeCodigos"/>
+<Playground nombreOperacion="TextoSegunPaginaDeCodigos" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

@@ -5,6 +5,11 @@
 Full cut
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=Corte)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Corte)
 
-<Playground nombreOperacion="Corte"/>
+<Playground nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

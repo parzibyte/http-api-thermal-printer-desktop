@@ -5,9 +5,9 @@
 Imprime los datos almacenados en el búfer de la impresora (almacenados al escribir texto) y avanza el papel una cantidad de lineas
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
 
-<Playground nombreOperacion="Feed"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
 
 ## Argumentos
 ### Cantidad de líneas para avanzar papel (`argumentos[0]`)
@@ -50,7 +50,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
-<Playground nombreOperacion="Feed"/>
+<Playground nombreOperacion="Feed" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

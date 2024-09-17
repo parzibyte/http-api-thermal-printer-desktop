@@ -3,6 +3,41 @@ import fs from 'node:fs';
 const carpetaIngles = "esc-pos";
 const carpetaEspañol = "es/esc-pos";
 
+const operacionNecesitaWkhtmlToImage = (operacion)=>{
+    if (["GenerarImagenAPartirDeHtmlEImprimir", "GenerarImagenAPartirDePaginaWebEImprimir"].includes(operacion.nombre)) {
+        return true;
+    }
+    return false;
+}
+
+const avisoHtmlEspañol = (operacion) => {
+    if (operacionNecesitaWkhtmlToImage(operacion)) {
+        return `
+::: warning
+**wkhtmltoimage debe existir en la PATH** para que esta operación funcione, necesitas
+[wkhtmltoimage](https://wkhtmltopdf.org/downloads.html) en la PATH o en el mismo directorio
+donde el plugin se ejecuta
+:::
+`;
+    }
+    return "";
+}
+
+
+
+const avisoHtmlIngles = (operacion) => {
+    if (operacionNecesitaWkhtmlToImage(operacion)) {
+        return `
+::: warning
+**You need wkhtmltoimage on the PATH:** in order for this to work, you need the executable
+[wkhtmltoimage](https://wkhtmltopdf.org/downloads.html) on the PATH or in the same
+directory where the plugin is being executed
+:::
+`;
+    }
+    return "";
+}
+
 const normalizarNombre = (nombre) => {
     const mapaAcentos = {
         'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
@@ -27,10 +62,10 @@ const generarEnEspañol = () => {
 
 ${operacion.descripcion}
 
+${avisoHtmlEspañol(operacion)}
+
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
-
-<Playground nombreOperacion="${operacion.nombre}"/>
 
 ## Argumentos
 `;
@@ -77,7 +112,7 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
-<Playground nombreOperacion="${operacion.nombre}"/>
+<Playground nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 \`\`\`js
@@ -141,6 +176,11 @@ const generarEnIngles = () => {
 ${operacion.descripcion_ingles}
 
 
+
+${avisoHtmlIngles(operacion)}
+
+
+
 [Try it on the Playground](../playground.md?operacion=${operacion.nombre})
 
 ## Arguments
@@ -190,7 +230,7 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 ### Playground
 [Try it on the Playground](../playground.md?operacion=${operacion.nombre})
 
-<Playground nombreOperacion="${operacion.nombre}"/>
+<Playground nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 \`\`\`js

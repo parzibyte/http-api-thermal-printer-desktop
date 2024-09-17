@@ -5,6 +5,11 @@
 Partial cut
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=CorteParcial)
 
 ## Arguments
@@ -36,7 +41,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=CorteParcial)
 
-<Playground nombreOperacion="CorteParcial"/>
+<Playground nombreOperacion="CorteParcial" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

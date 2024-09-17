@@ -5,6 +5,11 @@
 Set the font, which can be 0 or 1. In my case it only supports a source that is the A. Be careful when changing the font and trying to print a personalized character, because at the moment it only works with the source to
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerFuente)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerFuente)
 
-<Playground nombreOperacion="EstablecerFuente"/>
+<Playground nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

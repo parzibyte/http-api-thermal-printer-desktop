@@ -5,9 +5,9 @@
 Genera un pulso eléctrico (sirve para abrir el cajón de dinero) tomando en cuenta el tiempo encendido que son los milisegundos para encender y los milisegundos para apagar según el tiempo de apagado. El pin puede ser 48 o 49. Lo recomendado es el pin 48, tiempo encendido de 60 y tiempoApagado de 120
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Pulso)
 
-<Playground nombreOperacion="Pulso"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=Pulso)
 
 ## Argumentos
 ### Número de pin (48 o 49) (`argumentos[0]`)
@@ -76,7 +76,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Pulso)
-<Playground nombreOperacion="Pulso"/>
+<Playground nombreOperacion="Pulso" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

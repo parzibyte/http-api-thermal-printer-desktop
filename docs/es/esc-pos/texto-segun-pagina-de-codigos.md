@@ -5,9 +5,9 @@
 Permite escribir texto con acentos. Hay que especificar el número de página (según la impresora) y el character code page para iconv. Recomiendo probar con varias combinaciones. Esta función no tiene ningún efecto si la versión del plugin usada es la versión que no tiene iconv
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
-<Playground nombreOperacion="TextoSegunPaginaDeCodigos"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
 ## Argumentos
 ### Número de página según tu impresora (`argumentos[0]`)
@@ -76,7 +76,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=TextoSegunPaginaDeCodigos)
-<Playground nombreOperacion="TextoSegunPaginaDeCodigos"/>
+<Playground nombreOperacion="TextoSegunPaginaDeCodigos" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

@@ -5,6 +5,11 @@
 Print a bar code in UPCA format. The algorithm refers to the algorithm used to print the image, which can be 0 to use the Raster Bit Image method, 1 for BIT Image Column Format and 2 for NV Graphics. The most recent printers support NV Graphics, the old support Raster Bit Image and Image Column Format. More information about algorithms: https://parzibyte.me/blog/2024/01/17/metodos-imprimir-imagenes-impresoras-termicas/ The other parameters are related to the code generation algorithm
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasUpcA)
 
 ## Arguments
@@ -89,7 +94,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasUpcA)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcA"/>
+<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcA" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

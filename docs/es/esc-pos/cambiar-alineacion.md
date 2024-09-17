@@ -5,9 +5,9 @@
 Establece la alineación del texto e imágenes (incluyendo códigos de barras y QR) según la alineacion. Izquierda es 0, Centro 1 y Derecha 2
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerAlineacion)
 
-<Playground nombreOperacion="EstablecerAlineacion"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerAlineacion)
 
 ## Argumentos
 ### Alineación (0, 1 o 2) (`argumentos[0]`)
@@ -50,7 +50,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerAlineacion)
-<Playground nombreOperacion="EstablecerAlineacion"/>
+<Playground nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

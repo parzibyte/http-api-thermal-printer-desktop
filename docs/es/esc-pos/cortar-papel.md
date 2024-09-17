@@ -5,9 +5,9 @@
 Corte completo
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
 
-<Playground nombreOperacion="Corte"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
 
 ## Argumentos
 ### Líneas de avance de papel (`argumentos[0]`)
@@ -50,7 +50,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
-<Playground nombreOperacion="Corte"/>
+<Playground nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

@@ -5,9 +5,9 @@
 Imprime un código de barras en formato Code93. El algoritmo se refiere al algoritmo utilizado al imprimir la imagen, que puede ser 0 para usar el método Raster Bit Image, 1 para Bit Image Column Format y 2 para NV Graphics. Las impresoras más recientes soportan NV Graphics, las antiguas soportan Raster Bit Image e Image Column Format. Más información sobre los algoritmos: https://parzibyte.me/blog/2024/01/17/metodos-imprimir-imagenes-impresoras-termicas/ Los demás parámetros son propios del algoritmo de generación del código
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode93)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasCode93"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode93)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -89,7 +89,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode93)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasCode93"/>
+<Playground nombreOperacion="ImprimirCodigoDeBarrasCode93" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

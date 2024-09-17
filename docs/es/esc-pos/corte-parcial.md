@@ -5,9 +5,9 @@
 Corte parcial
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=CorteParcial)
 
-<Playground nombreOperacion="CorteParcial"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=CorteParcial)
 
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
@@ -38,7 +38,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=CorteParcial)
-<Playground nombreOperacion="CorteParcial"/>
+<Playground nombreOperacion="CorteParcial" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

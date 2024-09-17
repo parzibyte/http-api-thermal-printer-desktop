@@ -5,6 +5,11 @@
 Print the data stored in the printer buffer (stored when writing text) and feeds paper a number of lines
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=Feed)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Feed)
 
-<Playground nombreOperacion="Feed"/>
+<Playground nombreOperacion="Feed" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

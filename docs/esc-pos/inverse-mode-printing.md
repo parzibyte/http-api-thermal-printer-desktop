@@ -5,6 +5,11 @@
 Enable or disable inverse print. In reverse mode, the background is black and the text is white
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerImpresionBlancoYNegroInversa)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerImpresionBlancoYNegroInversa)
 
-<Playground nombreOperacion="EstablecerImpresionBlancoYNegroInversa"/>
+<Playground nombreOperacion="EstablecerImpresionBlancoYNegroInversa" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

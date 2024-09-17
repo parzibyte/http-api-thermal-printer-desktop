@@ -5,6 +5,11 @@
 Set the font size according to the width and height multiplier. Both values ​​can range from 1 to 8. It also affects personalized characters
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerTamañoFuente)
 
 ## Arguments
@@ -63,7 +68,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerTamañoFuente)
 
-<Playground nombreOperacion="EstablecerTamañoFuente"/>
+<Playground nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

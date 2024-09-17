@@ -5,6 +5,11 @@
 It generates an electric pulse (used to open the cash drawer) taking into account the on time which are the milliseconds to turn on and the milliseconds to turn off according to the off time. The pin can be 48 or 49. The recommended pin is 48, on time of 60 and off time of 120.
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=Pulso)
 
 ## Arguments
@@ -76,7 +81,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Pulso)
 
-<Playground nombreOperacion="Pulso"/>
+<Playground nombreOperacion="Pulso" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

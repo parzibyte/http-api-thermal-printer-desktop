@@ -5,9 +5,9 @@
 Deshabilita los caracteres personalizados
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=DeshabilitarCaracteresPersonalizados)
 
-<Playground nombreOperacion="DeshabilitarCaracteresPersonalizados"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=DeshabilitarCaracteresPersonalizados)
 
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
@@ -38,7 +38,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=DeshabilitarCaracteresPersonalizados)
-<Playground nombreOperacion="DeshabilitarCaracteresPersonalizados"/>
+<Playground nombreOperacion="DeshabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

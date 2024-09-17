@@ -5,9 +5,9 @@
 Establece el tamaño de la fuente según el multiplicador de ancho y el multiplicador del alto. Ambos valores pueden ir desde el 1 hasta el 8. También afecta a los caracteres personalizados
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerTamañoFuente)
 
-<Playground nombreOperacion="EstablecerTamañoFuente"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerTamañoFuente)
 
 ## Argumentos
 ### Multiplicador de ancho (1-8) (`argumentos[0]`)
@@ -63,7 +63,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerTamañoFuente)
-<Playground nombreOperacion="EstablecerTamañoFuente"/>
+<Playground nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

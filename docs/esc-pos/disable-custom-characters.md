@@ -5,6 +5,11 @@
 Disable custom characters
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=DeshabilitarCaracteresPersonalizados)
 
 ## Arguments
@@ -36,7 +41,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=DeshabilitarCaracteresPersonalizados)
 
-<Playground nombreOperacion="DeshabilitarCaracteresPersonalizados"/>
+<Playground nombreOperacion="DeshabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

@@ -26,6 +26,8 @@ const i18n = createI18n({
       compartir: "Compartir",
       copiado: "Copiado",
       copiarManualmente: "Por favor copia el enlace",
+      ocultarOperacionesDisponibles: "Ocultar operaciones disponibles",
+      mostrarOperacionesDisponibles: "Mostrar operaciones disponibles",
     },
     en: {
       versionPlugin: 'Plugin running with platform',
@@ -46,6 +48,8 @@ const i18n = createI18n({
       compartir: "Share",
       copiado: "Copied to clipboard",
       copiarManualmente: "Please copy link",
+      ocultarOperacionesDisponibles: "Hide available operations",
+      mostrarOperacionesDisponibles: "Show available operations",
     }
   }
 })

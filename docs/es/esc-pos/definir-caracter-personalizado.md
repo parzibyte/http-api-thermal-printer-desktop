@@ -5,9 +5,9 @@
 Define un carácter personalizado de 24x12. Es útil para imprimir caracteres no soportados por algunas impresoras, ya sea el euro, centavo o lo que puedas dibujar en un cuadro de 24x12. Esta función establece el carácter personalizado pero no lo imprime. Solo hace falta llamarla a una vez, y después cada que se imprima el carácter reemplazado se va a imprimir el personalizado La matrizComoCadena debe ser, como su nombre lo dice, una matriz como cadena. Debe tener exactamente 24 líneas (separadas por un salto de línea) y en cada línea debe haber exactamente 12 dígitos, cada dígito debe ser un 1 o un 0. No debe haber tabulaciones ni espacios extra  Nota: la matriz es de 24x12 porque así es la fuente A. Si fuera la fuente B sería de 17x9, pero esa fuente no funciona en mi impresora así que no he probado. Es decir, no intentes esto si tienes seleccionada la fuente B. Para que esta operación funcione, debiste haber habilitado los caracteres personalizados previamente con HabilitarCaracteresPersonalizados
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
 
-<Playground nombreOperacion="DefinirCaracterPersonalizado"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
 
 ## Argumentos
 ### Carácter que será reemplazado (`argumentos[0]`)
@@ -86,7 +86,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
-<Playground nombreOperacion="DefinirCaracterPersonalizado"/>
+<Playground nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

@@ -5,6 +5,11 @@
 Enable or disable 90 degrees rotation
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerRotacionDe90Grados)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerRotacionDe90Grados)
 
-<Playground nombreOperacion="EstablecerRotacionDe90Grados"/>
+<Playground nombreOperacion="EstablecerRotacionDe90Grados" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

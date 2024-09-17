@@ -5,6 +5,11 @@
 Prints an existing image on the file system, provided that the plugin has the permissions to access it. The image will be converted to black and white. If the width of the image is greater than the maximum width specified, the image will be resized to match. Algorithm refers to the algorithm used when printing an image, which can be 0 for using the Raster Bit Image method, 1 for Bit Image Column Format and 2 for NV Graphics. Newer printers support NV Graphics, older ones support Raster Bit Image and Image Column Format. It is recommended that the user tries all 3 algorithms to find the most suitable one. More information about the algorithms: https://parzibyte.me/blog/2024/01/17/methods-for-printing-images-thermal-printers/ . The dithering parameter indicates whether the Floyd-Steinberg-Dithering algorithm should be applied to the image before it is printed. It is recommended to apply it to pictures (and no illustrations), so that the lighting and details are maintained even when converted to black and white. More information about dithering: https://parzibyte.me/blog/2024/07/28/algoritmo-floyd-steinberg-dithering-golang/
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=CargarImagenLocalEImprimir)
 
 ## Arguments
@@ -89,7 +94,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=CargarImagenLocalEImprimir)
 
-<Playground nombreOperacion="CargarImagenLocalEImprimir"/>
+<Playground nombreOperacion="CargarImagenLocalEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

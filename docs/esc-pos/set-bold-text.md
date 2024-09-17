@@ -5,6 +5,11 @@
 Enable or disable bold text mode
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerEnfatizado)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerEnfatizado)
 
-<Playground nombreOperacion="EstablecerEnfatizado"/>
+<Playground nombreOperacion="EstablecerEnfatizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

@@ -5,6 +5,11 @@
 Enable or disable underlined text mode
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerSubrayado)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerSubrayado)
 
-<Playground nombreOperacion="EstablecerSubrayado"/>
+<Playground nombreOperacion="EstablecerSubrayado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

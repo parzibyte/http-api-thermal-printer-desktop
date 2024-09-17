@@ -5,9 +5,9 @@
 Habilita o deshabilita el modo de texto enfatizado
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerEnfatizado)
 
-<Playground nombreOperacion="EstablecerEnfatizado"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerEnfatizado)
 
 ## Argumentos
 ### Habilitar texto enfatizado (`argumentos[0]`)
@@ -50,7 +50,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerEnfatizado)
-<Playground nombreOperacion="EstablecerEnfatizado"/>
+<Playground nombreOperacion="EstablecerEnfatizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

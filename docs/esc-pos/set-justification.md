@@ -5,6 +5,11 @@
 Set text, images, barcodes and QR codes justification according to the alignment providad. Left is 0, center 1 and right 2
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EstablecerAlineacion)
 
 ## Arguments
@@ -50,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerAlineacion)
 
-<Playground nombreOperacion="EstablecerAlineacion"/>
+<Playground nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

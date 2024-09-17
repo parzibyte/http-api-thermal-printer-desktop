@@ -5,6 +5,11 @@
 Defines a custom 24x12 character. It is useful for printing characters not supported by some printers, either the euro, penny or what you can draw in a 24x12 box. This function establishes the personalized character but does not print it. Only It is necessary to call it once, and then every time the replaced character is printed, the custom character will be printed instead. The  matrix as string must be, as its name says, a matrix as a string. You must have exactly 24 lines (separated by a line jump) and in each line there must be exactly 12 digits, each digit must be a 1 or 0. There should be no tabulations or extra spaces  Note: The matrix is ​​24x12 because this is the source A. If it were the source B would be 17x9, but that source doesn't work in my printer so I haven't tried. So, do not try this if you have source B select. For this operation to work, you need to call HabilitarCaracteresPersonalizados before
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=DefinirCaracterPersonalizado)
 
 ## Arguments
@@ -86,7 +91,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=DefinirCaracterPersonalizado)
 
-<Playground nombreOperacion="DefinirCaracterPersonalizado"/>
+<Playground nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

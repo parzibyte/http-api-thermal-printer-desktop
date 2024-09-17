@@ -5,6 +5,11 @@
 Write text in the printer. The text will not be printed until a line jump (\n) is found or Feed is invoked
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=EscribirTexto)
 
 ## Arguments
@@ -51,7 +56,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EscribirTexto)
 
-<Playground nombreOperacion="EscribirTexto"/>
+<Playground nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

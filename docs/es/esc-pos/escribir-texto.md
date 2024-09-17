@@ -5,9 +5,9 @@
 Escribe texto en la impresora. El texto no será impreso hasta que se encuentre un salto de línea (\n) o se invoque a Feed
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EscribirTexto)
 
-<Playground nombreOperacion="EscribirTexto"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=EscribirTexto)
 
 ## Argumentos
 ### Texto que se imprime (`argumentos[0]`)
@@ -51,7 +51,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EscribirTexto)
-<Playground nombreOperacion="EscribirTexto"/>
+<Playground nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

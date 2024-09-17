@@ -127,10 +127,10 @@ export default defineUserConfig({
       "/": {
         selectLanguageName: "English",
         navbar: [
-          '/', '/get-started', '/introduccion', '/guia', "/playground",
+          '/', '/introduction', '/api-description', "/playground", "/compatible-printers",
           {
-            text: "Text",
-            children: ["/guia/descargar-plugin.md", "/guia/comenzar.md", "/guia/compartir-impresora.md"]
+            text: "Guide",
+            children: ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md", ]
           },
           {
             text: "Available ESC POS operations",
@@ -209,16 +209,7 @@ export default defineUserConfig({
             '/esc-pos/code-128-barcode.md',
             '/esc-pos/qr-code.md'
           ],
-          "/guia/": [
-            {
-              text: "English",
-              children: [
-                "/guia/comenzar.md",
-                "/guia/compartir-impresora.md",
-                "/guia/descargar-plugin.md",
-              ]
-            }
-          ]
+          "/guide/": ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",]
         }
       }
     },

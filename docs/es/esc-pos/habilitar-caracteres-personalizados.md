@@ -5,9 +5,9 @@
 Habilita los caracteres personalizados. Si está habilitado entonces se va a imprimir el carácter personalizado en lugar del carácter que fue indicado para ser reemplazado
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=HabilitarCaracteresPersonalizados)
 
-<Playground nombreOperacion="HabilitarCaracteresPersonalizados"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=HabilitarCaracteresPersonalizados)
 
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
@@ -38,7 +38,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=HabilitarCaracteresPersonalizados)
-<Playground nombreOperacion="HabilitarCaracteresPersonalizados"/>
+<Playground nombreOperacion="HabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

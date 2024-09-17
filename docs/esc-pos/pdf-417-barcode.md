@@ -5,6 +5,11 @@
 Print a barcode in PDF417 format. The algorithm refers to the algorithm used to convert the image, which can be 0 to use the Raster Bit Image method, 1 for BIT Image Column Format and 2 for NV Graphics. The most recent printers support NV Graphics, the old support Raster Bit Image and Image Column Format. More information about algorithms: https://parzibyte.me/blog/2024/01/17/metodos-imprimir-imagenes-impresoras-termicas/ The other parameters are related to the code generation algorithm Note: The security level is related to the barcode generation algorithm itself, not to the plugin. It must be between 0 and 8
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasPdf417)
 
 ## Arguments
@@ -102,7 +107,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasPdf417)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasPdf417"/>
+<Playground nombreOperacion="ImprimirCodigoDeBarrasPdf417" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

@@ -5,6 +5,11 @@
 Enable custom characters. If it is enabled then you will print the custom character instead of the character that was supplied to be replaced
 
 
+
+
+
+
+
 [Try it on the Playground](../playground.md?operacion=HabilitarCaracteresPersonalizados)
 
 ## Arguments
@@ -36,7 +41,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=HabilitarCaracteresPersonalizados)
 
-<Playground nombreOperacion="HabilitarCaracteresPersonalizados"/>
+<Playground nombreOperacion="HabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

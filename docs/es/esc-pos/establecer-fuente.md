@@ -5,9 +5,9 @@
 Establece la fuente, que puede ser 0 o 1. En mi caso solo soporta una fuente que es la A. Tener cuidado al cambiar la fuente e intentar imprimir un carácter personalizado, pues por el momento solo funciona con la fuente A
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
 
-<Playground nombreOperacion="EstablecerFuente"/>
+
+[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
 
 ## Argumentos
 ### Fuente (0, 1) (`argumentos[0]`)
@@ -50,7 +50,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
-<Playground nombreOperacion="EstablecerFuente"/>
+<Playground nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js
