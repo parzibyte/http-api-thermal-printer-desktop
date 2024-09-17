@@ -7,6 +7,8 @@ Define un carácter personalizado de 24x12. Es útil para imprimir caracteres no
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
 
+<Playground nombreOperacion="DefinirCaracterPersonalizado"/>
+
 ## Argumentos
 ### Carácter que será reemplazado (`argumentos[0]`)
 
@@ -82,7 +84,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
+<Playground nombreOperacion="DefinirCaracterPersonalizado"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

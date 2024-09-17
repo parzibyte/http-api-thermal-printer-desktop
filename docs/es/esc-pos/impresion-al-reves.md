@@ -7,6 +7,8 @@ Habilita o deshabilita la impresión al revés
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionAlReves)
 
+<Playground nombreOperacion="EstablecerImpresionAlReves"/>
+
 ## Argumentos
 ### Habilita o deshabilita impresión al revés (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionAlReves)
+<Playground nombreOperacion="EstablecerImpresionAlReves"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

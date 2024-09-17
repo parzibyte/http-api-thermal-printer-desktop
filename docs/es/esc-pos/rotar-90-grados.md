@@ -7,6 +7,8 @@ Habilita o deshabilita la rotación de 90 grados
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerRotacionDe90Grados)
 
+<Playground nombreOperacion="EstablecerRotacionDe90Grados"/>
+
 ## Argumentos
 ### Habilita o deshabilita rotación de 90 grados (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerRotacionDe90Grados)
+<Playground nombreOperacion="EstablecerRotacionDe90Grados"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

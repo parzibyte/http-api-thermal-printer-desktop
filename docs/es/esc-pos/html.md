@@ -7,6 +7,8 @@ Genera una imagen a partir del html usando el ancho de página como el ancho de 
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
 
+<Playground nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir"/>
+
 ## Argumentos
 ### HTML como cadena (`argumentos[0]`)
 
@@ -98,7 +100,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
+<Playground nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

@@ -7,6 +7,8 @@ Establece la fuente, que puede ser 0 o 1. En mi caso solo soporta una fuente que
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
 
+<Playground nombreOperacion="EstablecerFuente"/>
+
 ## Argumentos
 ### Fuente (0, 1) (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
+<Playground nombreOperacion="EstablecerFuente"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

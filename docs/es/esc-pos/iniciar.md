@@ -7,6 +7,8 @@ Inicializar impresora. Limpia los datos en el búfer y reinicia la impresora al 
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=Iniciar)
 
+<Playground nombreOperacion="Iniciar"/>
+
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
 
@@ -34,7 +36,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Iniciar)
+<Playground nombreOperacion="Iniciar"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

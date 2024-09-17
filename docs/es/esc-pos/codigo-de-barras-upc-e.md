@@ -7,6 +7,8 @@ Imprime un código de barras en formato UPC E. El algoritmo se refiere al algori
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasUpcE)
 
+<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcE"/>
+
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
 
@@ -85,7 +87,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasUpcE)
+<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcE"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

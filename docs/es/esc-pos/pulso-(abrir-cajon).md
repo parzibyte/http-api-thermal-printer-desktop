@@ -7,6 +7,8 @@ Genera un pulso eléctrico (sirve para abrir el cajón de dinero) tomando en cue
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=Pulso)
 
+<Playground nombreOperacion="Pulso"/>
+
 ## Argumentos
 ### Número de pin (48 o 49) (`argumentos[0]`)
 
@@ -72,7 +74,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Pulso)
+<Playground nombreOperacion="Pulso"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

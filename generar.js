@@ -30,6 +30,8 @@ ${operacion.descripcion}
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
 
+<Playground nombreOperacion="${operacion.nombre}"/>
+
 ## Argumentos
 `;
         if (operacion.argumentos.length === 0) {
@@ -73,7 +75,11 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
+<Playground nombreOperacion="${operacion.nombre}"/>
+
+### Ejemplo de código
 \`\`\`js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
@@ -181,7 +187,12 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 
 ## Example (JavaScript client side)
 
+### Playground
 [Try it on the Playground](../playground.md?operacion=${operacion.nombre})
+
+<Playground nombreOperacion="${operacion.nombre}"/>
+
+### Code example
 \`\`\`js
 const httpResponse = await fetch("http://localhost:8000/imprimir",
     {

@@ -7,6 +7,8 @@ Descarga una imagen de internet y la imprime. La imagen debe ser accesible públ
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=DescargarImagenDeInternetEImprimir)
 
+<Playground nombreOperacion="DescargarImagenDeInternetEImprimir"/>
+
 ## Argumentos
 ### URL de imagen (`argumentos[0]`)
 
@@ -85,7 +87,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=DescargarImagenDeInternetEImprimir)
+<Playground nombreOperacion="DescargarImagenDeInternetEImprimir"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

@@ -7,6 +7,8 @@ Imprime los datos almacenados en el búfer de la impresora (almacenados al escri
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
 
+<Playground nombreOperacion="Feed"/>
+
 ## Argumentos
 ### Cantidad de líneas para avanzar papel (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
+<Playground nombreOperacion="Feed"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

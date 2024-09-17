@@ -99,7 +99,12 @@ Don't forget to check every argument type
 
 ## Example (JavaScript client side)
 
+### Playground
 [Try it on the Playground](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
+
+<Playground nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir"/>
+
+### Code example
 ```js
 const httpResponse = await fetch("http://localhost:8000/imprimir",
     {

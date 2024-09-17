@@ -7,6 +7,8 @@ Corte parcial
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=CorteParcial)
 
+<Playground nombreOperacion="CorteParcial"/>
+
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
 
@@ -34,7 +36,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=CorteParcial)
+<Playground nombreOperacion="CorteParcial"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

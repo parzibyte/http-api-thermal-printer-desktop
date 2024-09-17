@@ -7,6 +7,8 @@ Permite escribir texto con acentos. Hay que especificar el número de página (s
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
+<Playground nombreOperacion="TextoSegunPaginaDeCodigos"/>
+
 ## Argumentos
 ### Número de página según tu impresora (`argumentos[0]`)
 
@@ -72,7 +74,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=TextoSegunPaginaDeCodigos)
+<Playground nombreOperacion="TextoSegunPaginaDeCodigos"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

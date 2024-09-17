@@ -7,6 +7,8 @@ Genera una imagen a partir del html generado por la página web ubicada en la di
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
 
+<Playground nombreOperacion="GenerarImagenAPartirDePaginaWebEImprimir"/>
+
 ## Argumentos
 ### URL de la página públicamente accesible (`argumentos[0]`)
 
@@ -98,7 +100,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
+<Playground nombreOperacion="GenerarImagenAPartirDePaginaWebEImprimir"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

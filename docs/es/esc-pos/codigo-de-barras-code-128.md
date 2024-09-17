@@ -7,6 +7,8 @@ Imprime un código de barras en formato Code128. El algoritmo se refiere al algo
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode128)
 
+<Playground nombreOperacion="ImprimirCodigoDeBarrasCode128"/>
+
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
 
@@ -85,7 +87,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode128)
+<Playground nombreOperacion="ImprimirCodigoDeBarrasCode128"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

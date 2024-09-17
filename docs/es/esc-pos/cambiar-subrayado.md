@@ -7,6 +7,8 @@ Habilita o deshabilita el modo de texto subrayado
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerSubrayado)
 
+<Playground nombreOperacion="EstablecerSubrayado"/>
+
 ## Argumentos
 ### Habilita el subrayado de texto (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerSubrayado)
+<Playground nombreOperacion="EstablecerSubrayado"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

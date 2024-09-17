@@ -1,7 +1,7 @@
 <script setup>
 import { encode, decode } from 'js-base64';
 import { useSiteLocaleData } from '@vuepress/client'
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, defineProps } from 'vue'
 import MiInput from "./MiInput.vue"
 import MiBoton from "./MiBoton.vue"
 import SelectSimple from "./SelectSimple.vue"
@@ -12,6 +12,7 @@ import { useI18n } from 'vue-i18n';
 const i18n = useI18n();
 import { operacionesDisponibles } from '../../../listaCompletaDeOperaciones.js'
 const busqueda = ref("");
+const props = defineProps(['nombreOperacion'])
 
 const operacionesFiltradas = computed(() => {
     if (busqueda.value === "") {
@@ -163,46 +164,57 @@ const esEspañol = () => {
     return i18n.locale.value === "es";
 }
 
+const agregarOperacionPorNombre = (nombre) => {
+    if (!nombre) {
+        return;
+    }
+    const indice = operacionesDisponibles.findIndex(operacion => {
+        return operacion.nombre === nombre;
+    });
+    if (indice != -1) {
+        agregarOperacion(operacionesDisponibles[indice]);
+    }
+}
+
 onMounted(() => {
     const siteLocaleData = useSiteLocaleData();
     if (siteLocaleData.value.lang.includes("es")) {
         i18n.locale.value = "es";
     } else {
         i18n.locale.value = "en";
-
     }
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const posibleArreglo = urlSearchParams.get("operaciones");
-    if (posibleArreglo) {
-        try {
-            const operacionesDecodificadas = JSON.parse(decode(posibleArreglo));
-            for (const operacion of operacionesDecodificadas) {
-                const posibleIndice = operacionesDisponibles.findIndex(operacionExistente => {
-                    if (operacion.nombre === operacionExistente.nombre) {
-                        return true;
-                    }
-                    return false;
-                })
-                if (posibleIndice !== -1) {
-                    agregarOperacion(operacionesDisponibles[posibleIndice], operacion.argumentos);
-                }
-            }
-            console.log({ operacionesDecodificadas });
-        } catch (e) {
-            console.log({ posibleArreglo });
 
-            console.log(e);
-
-
-        }
+    if (props.nombreOperacion) {
+        agregarOperacionPorNombre(props.nombreOperacion);
     } else {
-        const posibleNombreOperacion = urlSearchParams.get("operacion");
-        if (posibleNombreOperacion) {
-            const indice = operacionesDisponibles.findIndex(operacion => {
-                return operacion.nombre === posibleNombreOperacion;
-            });
-            if (indice != -1) {
-                agregarOperacion(operacionesDisponibles[indice]);
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const posibleArreglo = urlSearchParams.get("operaciones");
+        if (posibleArreglo) {
+            try {
+                const operacionesDecodificadas = JSON.parse(decode(posibleArreglo));
+                for (const operacion of operacionesDecodificadas) {
+                    const posibleIndice = operacionesDisponibles.findIndex(operacionExistente => {
+                        if (operacion.nombre === operacionExistente.nombre) {
+                            return true;
+                        }
+                        return false;
+                    })
+                    if (posibleIndice !== -1) {
+                        agregarOperacion(operacionesDisponibles[posibleIndice], operacion.argumentos);
+                    }
+                }
+                console.log({ operacionesDecodificadas });
+            } catch (e) {
+                console.log({ posibleArreglo });
+
+                console.log(e);
+
+
+            }
+        } else {
+            const posibleNombreOperacion = urlSearchParams.get("operacion");
+            if (posibleNombreOperacion) {
+                agregarOperacionPorNombre(posibleNombreOperacion);
             }
         }
     }

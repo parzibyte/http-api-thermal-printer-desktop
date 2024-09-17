@@ -7,6 +7,8 @@ Imprime un código de barras en formato PDF417. El algoritmo se refiere al algor
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasPdf417)
 
+<Playground nombreOperacion="ImprimirCodigoDeBarrasPdf417"/>
+
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
 
@@ -98,7 +100,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasPdf417)
+<Playground nombreOperacion="ImprimirCodigoDeBarrasPdf417"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {

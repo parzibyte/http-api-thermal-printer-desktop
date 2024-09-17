@@ -7,6 +7,8 @@ Corte completo
 
 [Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
 
+<Playground nombreOperacion="Corte"/>
+
 ## Argumentos
 ### Líneas de avance de papel (`argumentos[0]`)
 
@@ -46,7 +48,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ## Ejemplo (JavaScript lado del cliente)
 
+### Área de pruebas
 [Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
+<Playground nombreOperacion="Corte"/>
+
+### Ejemplo de código
 ```js
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
