@@ -326,7 +326,7 @@ const deberiaMostrarListaCompleta = ref(true);
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
             <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
-            <SelectSimple :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
+            <SelectSimple :toString="(nombreImpresora)=>nombreImpresora" :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
                 :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
             <div class="bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
