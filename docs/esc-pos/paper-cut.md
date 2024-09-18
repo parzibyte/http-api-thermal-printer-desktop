@@ -55,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Corte)
 
-<Playground nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

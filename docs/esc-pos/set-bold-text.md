@@ -55,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerEnfatizado)
 
-<Playground nombreOperacion="EstablecerEnfatizado" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EstablecerEnfatizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

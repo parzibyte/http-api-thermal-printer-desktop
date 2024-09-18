@@ -113,7 +113,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
 
-<Playground nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

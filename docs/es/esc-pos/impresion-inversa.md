@@ -7,7 +7,7 @@ Habilita o deshabilita la impresión inversa. En modo inverso, el fondo es negro
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionBlancoYNegroInversa)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerImpresionBlancoYNegroInversa)
 
 ## Argumentos
 ### Impresión inversa (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionBlancoYNegroInversa)
-<Playground nombreOperacion="EstablecerImpresionBlancoYNegroInversa" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerImpresionBlancoYNegroInversa)
+<Playground urlBase="../.." nombreOperacion="EstablecerImpresionBlancoYNegroInversa" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

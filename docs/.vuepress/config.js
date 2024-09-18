@@ -30,9 +30,18 @@ export default defineUserConfig({
         next: "Siguiente",
         selectLanguageName: "Español",
         navbar: [
-          '/es/', '/es/get-started', '/es/introduccion', '/es/guia', "/es/playground",
+          '/es/',
           {
-            text: "Operaciones disponibles",
+            text: "Guía",
+            children: ["/es/guia/introduccion.md", "/es/guia/descargar.md", "/es/guia/instalar-compartir-impresora.md", "/es/guia/hola-impresora.md",]
+          },
+          {
+            text: "Descripción de la API",
+            children: ["/es/api/introduccion.md", "/es/api/imprimir.md", "/es/api/obtener-impresoras.md", "/es/api/version-ping.md", "/es/api/reenviar.md", "/es/api/detener.md",],
+          },
+
+          {
+            text: "Operaciones ESC POS disponibles",
             children: [
               '/es/esc-pos/iniciar.md',
               '/es/esc-pos/escribir-texto.md',
@@ -70,12 +79,19 @@ export default defineUserConfig({
               '/es/esc-pos/codigo-qr.md'
             ],
           },
-          {
-            text: "Text",
-            children: ["/es/guia/descargar-plugin.md", "/es/guia/comenzar.md", "/es/guia/compartir-impresora.md"]
-          }
+          "/es/area-pruebas",
+          "/es/impresoras-compatibles",
+
         ],
         sidebar: {
+          "/es/api/": [
+            "/es/api/introduccion.md",
+            "/es/api/imprimir.md",
+            "/es/api/obtener-impresoras.md",
+            "/es/api/version-ping.md",
+            "/es/api/reenviar.md",
+            "/es/api/detener.md",
+          ],
           "/es/esc-pos/": [
             '/es/esc-pos/iniciar.md',
             '/es/esc-pos/escribir-texto.md',
@@ -114,11 +130,11 @@ export default defineUserConfig({
           ],
           "/es/guia/": [
             {
-              text: "TExtttt",
               children: [
-                "/es/guia/comenzar.md",
-                "/es/guia/compartir-impresora.md",
-                "/es/guia/descargar-plugin.md",
+                "/es/guia/introduccion.md",
+                "/es/guia/descargar.md",
+                "/es/guia/instalar-compartir-impresora.md",
+                "/es/guia/hola-impresora.md",
               ]
             }
           ]

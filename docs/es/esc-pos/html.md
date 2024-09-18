@@ -13,7 +13,7 @@ donde el plugin se ejecuta
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
 
 ## Argumentos
 ### HTML como cadena (`argumentos[0]`)
@@ -107,8 +107,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
-<Playground nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=GenerarImagenAPartirDeHtmlEImprimir)
+<Playground urlBase="../.." nombreOperacion="GenerarImagenAPartirDeHtmlEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

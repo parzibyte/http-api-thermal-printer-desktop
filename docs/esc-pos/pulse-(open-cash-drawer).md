@@ -81,7 +81,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Pulso)
 
-<Playground nombreOperacion="Pulso" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="Pulso" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

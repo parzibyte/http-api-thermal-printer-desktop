@@ -7,7 +7,7 @@ Imprime un código de barras en formato Ean8. El algoritmo se refiere al algorit
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasEan8)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasEan8)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasEan8)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasEan8" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasEan8)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasEan8" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

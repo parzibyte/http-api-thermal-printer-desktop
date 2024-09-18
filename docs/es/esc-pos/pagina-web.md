@@ -13,7 +13,7 @@ donde el plugin se ejecuta
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
 
 ## Argumentos
 ### URL de la página públicamente accesible (`argumentos[0]`)
@@ -107,8 +107,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
-<Playground nombreOperacion="GenerarImagenAPartirDePaginaWebEImprimir" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=GenerarImagenAPartirDePaginaWebEImprimir)
+<Playground urlBase="../.." nombreOperacion="GenerarImagenAPartirDePaginaWebEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

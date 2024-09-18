@@ -94,7 +94,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirImagenEnBase64)
 
-<Playground nombreOperacion="ImprimirImagenEnBase64" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="ImprimirImagenEnBase64" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

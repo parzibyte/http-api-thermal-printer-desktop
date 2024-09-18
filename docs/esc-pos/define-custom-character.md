@@ -91,7 +91,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=DefinirCaracterPersonalizado)
 
-<Playground nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

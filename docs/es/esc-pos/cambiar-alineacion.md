@@ -7,7 +7,7 @@ Establece la alineación del texto e imágenes (incluyendo códigos de barras y 
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerAlineacion)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerAlineacion)
 
 ## Argumentos
 ### Alineación (0, 1 o 2) (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerAlineacion)
-<Playground nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerAlineacion)
+<Playground urlBase="../.." nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

@@ -7,7 +7,7 @@ Escribe texto en la impresora. El texto no será impreso hasta que se encuentre 
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EscribirTexto)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EscribirTexto)
 
 ## Argumentos
 ### Texto que se imprime (`argumentos[0]`)
@@ -50,8 +50,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EscribirTexto)
-<Playground nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EscribirTexto)
+<Playground urlBase="../.." nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

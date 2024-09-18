@@ -7,7 +7,7 @@ Imprime un código de barras en formato Ean. El algoritmo se refiere al algoritm
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasEan)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasEan)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasEan)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasEan" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasEan)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasEan" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

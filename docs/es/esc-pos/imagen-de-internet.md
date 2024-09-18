@@ -7,7 +7,7 @@ Descarga una imagen de internet y la imprime. La imagen debe ser accesible públ
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=DescargarImagenDeInternetEImprimir)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=DescargarImagenDeInternetEImprimir)
 
 ## Argumentos
 ### URL de imagen (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=DescargarImagenDeInternetEImprimir)
-<Playground nombreOperacion="DescargarImagenDeInternetEImprimir" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=DescargarImagenDeInternetEImprimir)
+<Playground urlBase="../.." nombreOperacion="DescargarImagenDeInternetEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

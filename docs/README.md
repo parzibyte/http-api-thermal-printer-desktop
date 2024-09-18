@@ -19,7 +19,7 @@ features:
     details: Use raster bit image, bit image column format or NV graphics algorithms. You can also apply Floyd-Steinberg dithering. All out of the box!
 
   - title: Everything you need
-    details: Print text, change font, text style, barcodes, QR codes, webpages, pictures
+    details: Print text, change font, text style, print barcodes, QR codes, webpages, pictures
 
   - title: HTML
     details: Convert HTML to ESC POS by providing the HTML string or a URL. The plugin will visit it for you

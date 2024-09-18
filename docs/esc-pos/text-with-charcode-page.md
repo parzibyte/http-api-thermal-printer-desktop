@@ -81,7 +81,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=TextoSegunPaginaDeCodigos)
 
-<Playground nombreOperacion="TextoSegunPaginaDeCodigos" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="TextoSegunPaginaDeCodigos" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

@@ -7,7 +7,7 @@ Establece el tamaño de la fuente según el multiplicador de ancho y el multipli
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerTamañoFuente)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerTamañoFuente)
 
 ## Argumentos
 ### Multiplicador de ancho (1-8) (`argumentos[0]`)
@@ -62,8 +62,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerTamañoFuente)
-<Playground nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerTamañoFuente)
+<Playground urlBase="../.." nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

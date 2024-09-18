@@ -120,7 +120,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasCode39)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasCode39" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="ImprimirCodigoDeBarrasCode39" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

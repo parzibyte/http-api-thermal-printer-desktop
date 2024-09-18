@@ -7,7 +7,7 @@ Habilita o deshabilita la rotación de 90 grados
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerRotacionDe90Grados)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerRotacionDe90Grados)
 
 ## Argumentos
 ### Habilita o deshabilita rotación de 90 grados (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerRotacionDe90Grados)
-<Playground nombreOperacion="EstablecerRotacionDe90Grados" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerRotacionDe90Grados)
+<Playground urlBase="../.." nombreOperacion="EstablecerRotacionDe90Grados" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

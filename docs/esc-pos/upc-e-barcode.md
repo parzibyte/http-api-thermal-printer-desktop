@@ -94,7 +94,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasUpcE)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcE" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="ImprimirCodigoDeBarrasUpcE" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

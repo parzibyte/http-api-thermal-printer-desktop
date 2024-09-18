@@ -7,7 +7,7 @@ Imprime un código de barras en formato Two of five ITF (Entrelazados 2 de 5). E
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasTwoOfFiveITF)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasTwoOfFiveITF)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -101,8 +101,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasTwoOfFiveITF)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasTwoOfFiveITF" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasTwoOfFiveITF)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasTwoOfFiveITF" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

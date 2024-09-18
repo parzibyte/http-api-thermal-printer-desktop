@@ -55,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerFuente)
 
-<Playground nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

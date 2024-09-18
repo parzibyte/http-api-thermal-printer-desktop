@@ -107,7 +107,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=ImprimirCodigoDeBarrasTwoOfFiveITF)
 
-<Playground nombreOperacion="ImprimirCodigoDeBarrasTwoOfFiveITF" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="ImprimirCodigoDeBarrasTwoOfFiveITF" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

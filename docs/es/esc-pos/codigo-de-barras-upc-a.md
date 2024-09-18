@@ -7,7 +7,7 @@ Imprime un código de barras en formato UpcA. El algoritmo se refiere al algorit
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasUpcA)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasUpcA)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasUpcA)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasUpcA" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasUpcA)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasUpcA" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

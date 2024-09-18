@@ -55,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerSubrayado)
 
-<Playground nombreOperacion="EstablecerSubrayado" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EstablecerSubrayado" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

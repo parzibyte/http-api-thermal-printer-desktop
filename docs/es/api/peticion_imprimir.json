@@ -1,0 +1,12 @@
+{
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+        {
+            "nombre": "EscribirTexto",
+            "argumentos": [
+                "Hola\nImpresora"
+            ]
+        }
+    ]
+}

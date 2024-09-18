@@ -7,7 +7,7 @@ Establece la fuente, que puede ser 0 o 1. En mi caso solo soporta una fuente que
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerFuente)
 
 ## Argumentos
 ### Fuente (0, 1) (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerFuente)
-<Playground nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerFuente)
+<Playground urlBase="../.." nombreOperacion="EstablecerFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

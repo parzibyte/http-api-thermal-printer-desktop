@@ -68,7 +68,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerTamañoFuente)
 
-<Playground nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EstablecerTamañoFuente" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

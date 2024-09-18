@@ -7,7 +7,7 @@ Imprime un código de barras en formato Code39. El algoritmo se refiere al algor
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode39)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasCode39)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -114,8 +114,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCode39)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasCode39" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasCode39)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasCode39" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

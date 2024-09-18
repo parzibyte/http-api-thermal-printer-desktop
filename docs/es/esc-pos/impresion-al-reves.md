@@ -7,7 +7,7 @@ Habilita o deshabilita la impresión al revés
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionAlReves)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerImpresionAlReves)
 
 ## Argumentos
 ### Habilita o deshabilita impresión al revés (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerImpresionAlReves)
-<Playground nombreOperacion="EstablecerImpresionAlReves" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerImpresionAlReves)
+<Playground urlBase="../.." nombreOperacion="EstablecerImpresionAlReves" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

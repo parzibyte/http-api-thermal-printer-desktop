@@ -7,7 +7,7 @@ Habilita los caracteres personalizados. Si está habilitado entonces se va a imp
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=HabilitarCaracteresPersonalizados)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=HabilitarCaracteresPersonalizados)
 
 ## Argumentos
 Esta operación no tiene argumentos. Simplemente envía el arreglo `argumentos` vacío
@@ -37,8 +37,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=HabilitarCaracteresPersonalizados)
-<Playground nombreOperacion="HabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=HabilitarCaracteresPersonalizados)
+<Playground urlBase="../.." nombreOperacion="HabilitarCaracteresPersonalizados" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

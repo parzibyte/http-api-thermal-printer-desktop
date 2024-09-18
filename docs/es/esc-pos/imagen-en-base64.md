@@ -7,7 +7,7 @@ Convierte el texto en base64 a una imagen. La imagen codificada en base64 puede 
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirImagenEnBase64)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirImagenEnBase64)
 
 ## Argumentos
 ### Imagen codificada en base64 (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirImagenEnBase64)
-<Playground nombreOperacion="ImprimirImagenEnBase64" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirImagenEnBase64)
+<Playground urlBase="../.." nombreOperacion="ImprimirImagenEnBase64" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

@@ -7,7 +7,7 @@ Habilita o deshabilita el modo de texto subrayado
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerSubrayado)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerSubrayado)
 
 ## Argumentos
 ### Habilita el subrayado de texto (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=EstablecerSubrayado)
-<Playground nombreOperacion="EstablecerSubrayado" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=EstablecerSubrayado)
+<Playground urlBase="../.." nombreOperacion="EstablecerSubrayado" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

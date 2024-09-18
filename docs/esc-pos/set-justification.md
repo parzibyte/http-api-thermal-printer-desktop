@@ -55,7 +55,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EstablecerAlineacion)
 
-<Playground nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EstablecerAlineacion" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

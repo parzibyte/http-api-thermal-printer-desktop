@@ -56,7 +56,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=EscribirTexto)
 
-<Playground nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="EscribirTexto" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js

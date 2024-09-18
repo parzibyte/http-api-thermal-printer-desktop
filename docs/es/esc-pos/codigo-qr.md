@@ -7,7 +7,7 @@ Imprime un código QR. El algoritmo se refiere al algoritmo utilizado al imprimi
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoQr)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoQr)
 
 ## Argumentos
 ### Contenido del código QR (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoQr)
-<Playground nombreOperacion="ImprimirCodigoQr" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoQr)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoQr" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

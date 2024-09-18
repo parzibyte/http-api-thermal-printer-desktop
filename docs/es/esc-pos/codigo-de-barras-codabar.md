@@ -7,7 +7,7 @@ Imprime un código de barras en formato Codabar. El algoritmo se refiere al algo
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCodabar)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasCodabar)
 
 ## Argumentos
 ### Contenido del código de barras (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=ImprimirCodigoDeBarrasCodabar)
-<Playground nombreOperacion="ImprimirCodigoDeBarrasCodabar" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=ImprimirCodigoDeBarrasCodabar)
+<Playground urlBase="../.." nombreOperacion="ImprimirCodigoDeBarrasCodabar" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

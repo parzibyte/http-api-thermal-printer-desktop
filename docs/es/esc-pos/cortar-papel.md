@@ -7,7 +7,7 @@ Corte completo
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=Corte)
 
 ## Argumentos
 ### Líneas de avance de papel (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=Corte)
-<Playground nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=Corte)
+<Playground urlBase="../.." nombreOperacion="Corte" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

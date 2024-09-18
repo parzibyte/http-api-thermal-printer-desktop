@@ -7,7 +7,7 @@ Imprime los datos almacenados en el búfer de la impresora (almacenados al escri
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=Feed)
 
 ## Argumentos
 ### Cantidad de líneas para avanzar papel (`argumentos[0]`)
@@ -49,8 +49,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=Feed)
-<Playground nombreOperacion="Feed" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=Feed)
+<Playground urlBase="../.." nombreOperacion="Feed" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

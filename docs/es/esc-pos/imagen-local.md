@@ -7,7 +7,7 @@ Imprime una imagen existente en el sistema de archivos, suponiendo que el plugin
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=CargarImagenLocalEImprimir)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=CargarImagenLocalEImprimir)
 
 ## Argumentos
 ### Relative or absolute path to image (`argumentos[0]`)
@@ -88,8 +88,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=CargarImagenLocalEImprimir)
-<Playground nombreOperacion="CargarImagenLocalEImprimir" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=CargarImagenLocalEImprimir)
+<Playground urlBase="../.." nombreOperacion="CargarImagenLocalEImprimir" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

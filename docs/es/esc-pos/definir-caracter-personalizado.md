@@ -7,7 +7,7 @@ Define un carácter personalizado de 24x12. Es útil para imprimir caracteres no
 
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=DefinirCaracterPersonalizado)
 
 ## Argumentos
 ### Carácter que será reemplazado (`argumentos[0]`)
@@ -85,8 +85,8 @@ No olvides revisar el tipo de dato de cada argumento
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=DefinirCaracterPersonalizado)
-<Playground nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=DefinirCaracterPersonalizado)
+<Playground urlBase="../.." nombreOperacion="DefinirCaracterPersonalizado" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 ```js

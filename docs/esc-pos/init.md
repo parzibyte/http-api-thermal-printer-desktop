@@ -13,7 +13,9 @@ Initialize printer.Clean the data in the buffer and restart the printer to the s
 [Try it on the Playground](../playground.md?operacion=Iniciar)
 
 ## Arguments
-This operation does not have arguments. Just send the `argumentos` array empty## Operation example
+This operation does not have arguments. Just send the `argumentos` array empty
+
+## Operation example
 
 
 Push this operation to the operation list (whose key is `operaciones`) that you will send with the request.
@@ -41,7 +43,7 @@ Don't forget to check every argument type
 ### Playground
 [Try it on the Playground](../playground.md?operacion=Iniciar)
 
-<Playground nombreOperacion="Iniciar" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="Iniciar" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 ```js
