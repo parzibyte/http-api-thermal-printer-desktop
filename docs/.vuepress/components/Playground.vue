@@ -1,7 +1,7 @@
 <script setup>
 import { encode, decode } from 'js-base64';
 import { useSiteLocaleData } from '@vuepress/client'
-import { ref, computed, onMounted, defineProps } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import MiInput from "./MiInput.vue"
 import MiBoton from "./MiBoton.vue"
 import SelectSimple from "./SelectSimple.vue"
@@ -146,8 +146,13 @@ const mensajeErrorVersion = ref("");
 
 
 const refrescarDetalles = async () => {
+    if (!deberiaHacerPeticion.value) {
+        return;
+    }
     try {
-        const respuestaHttp = await fetch(url.value + "/version")
+        const respuestaHttp = await fetch(url.value + "/version", {
+            signal: controller.signal,
+        })
         const detalles = await respuestaHttp.json();
         detallesPlugin.value = detalles;
         mensajeErrorVersion.value = "";
@@ -176,6 +181,12 @@ const agregarOperacionPorNombre = (nombre) => {
     }
 }
 
+const deberiaHacerPeticion = ref(false);
+const controller = new AbortController();
+onBeforeUnmount(() => {
+    controller.abort();
+    deberiaHacerPeticion.value = false;
+});
 onMounted(() => {
     const siteLocaleData = useSiteLocaleData();
     if (siteLocaleData.value.lang.includes("es")) {
@@ -206,13 +217,8 @@ onMounted(() => {
                         agregarOperacion(operacionesDisponibles[posibleIndice], operacion.argumentos);
                     }
                 }
-                console.log({ operacionesDecodificadas });
             } catch (e) {
-                console.log({ posibleArreglo });
-
-                console.log(e);
-
-
+                console.error(e);
             }
         } else {
             const posibleNombreOperacion = urlSearchParams.get("operacion");
@@ -222,6 +228,7 @@ onMounted(() => {
         }
     }
 
+    deberiaHacerPeticion.value = true;
     refrescarDetalles();
     refrescarImpresoras();
 });
@@ -326,7 +333,8 @@ const deberiaMostrarListaCompleta = ref(true);
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
             <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
-            <SelectSimple :toString="(nombreImpresora)=>nombreImpresora" :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
+            <SelectSimple :toString="(nombreImpresora) => nombreImpresora"
+                :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
                 :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
             <div class="bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
