@@ -17,7 +17,7 @@ Envía un objeto JSON con las siguientes propiedades:
 | Propiedad | Tipo | Descripción | Ejemplo |
 | ------------ | ------------ | ------------ | -- |
 | `serial` | String | Serial opcional del plugin para apoyar al desarrollo | `""`
-| `nombreImpresora` | String | Nombre de la impresora donde se realizarán las operaciones ESC POS. Puedes llamar al método para [obtener las impresoras](./get-printers.md) o puedes especificarlo manualmente | `"POS58"`
+| `nombreImpresora` | String | Nombre de la impresora donde se realizarán las operaciones ESC POS. Puedes llamar al método para [obtener las impresoras](./obtener-impresoras.md) o puedes especificarlo manualmente | `"POS58"`
 | `operaciones` | Array | Arreglo de objetos. Cada objeto dentro de `operaciones` debe tener una propiedad `nombre` y una propiedad `argumentos` | ```[{"nombre": "EscribirTexto", "argumentos": ["Hola\nImpresora"]}]```
 | `nombre` (Propiedad del objeto dentro del arreglo `operaciones`) | String | Nombre de la operación que puedes obtener en Operaciones ESC POS disponibles | `"EscribirTexto"`
 | `argumentos` (Propiedad del objeto dentro del arreglo `operaciones`) | Array | Argumentos en el orden en que aparecen en las Operaciones ESC POS disponibles | `["Hola\nImpresora"]`
