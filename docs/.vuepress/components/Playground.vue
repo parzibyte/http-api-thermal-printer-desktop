@@ -12,7 +12,7 @@ import { useI18n } from 'vue-i18n';
 const i18n = useI18n();
 import { operacionesDisponibles } from '../../../listaCompletaDeOperaciones.js'
 const busqueda = ref("");
-const props = defineProps(['nombreOperacion', 'ocultarOperacionesDisponibles'])
+const props = defineProps(['nombreOperacion', 'ocultarOperacionesDisponibles', 'urlBase'])
 
 const operacionesFiltradas = computed(() => {
     if (busqueda.value === "") {
@@ -275,16 +275,38 @@ const compartir = async () => {
 }
 const enlaceCompartirImpresora = () => {
     if (esEspañol()) {
-        return "";
+        return props.urlBase + "/es/guia/instalar-compartir-impresora.html";
     } else {
-        return "./guide/install-share-printer.html";
+        return props.urlBase + "/guide/install-share-printer.html";
     }
 }
 const enlaceDescargarPlugin = () => {
     if (esEspañol()) {
-        return "";
+        return props.urlBase + "/es/guia/descargar.html";
     } else {
-        return "./guide/download.html";
+        return props.urlBase + "/guide/download.html";
+    }
+}
+
+
+const normalizarNombre = (nombre) => {
+    const mapaAcentos = {
+        'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
+        'Á': 'a', 'É': 'e', 'Í': 'i', 'Ó': 'o', 'Ú': 'u',
+        'ñ': 'n', 'Ñ': 'n'
+    };
+
+    return nombre
+        .toLowerCase()
+        .replace(/[áéíóúñÁÉÍÓÚÑ]/g, (letra) => mapaAcentos[letra])
+        .replaceAll(" ", "-");
+}
+
+const enlaceOperacion = (operacion) => {
+    if (esEspañol()) {
+        return props.urlBase + `/es/esc-pos/${normalizarNombre(operacion.nombre_corto)}.html`;
+    } else {
+        return props.urlBase + `/esc-pos/${normalizarNombre(operacion.nombre_corto_ingles)}.html`;
     }
 }
 
@@ -325,7 +347,7 @@ const deberiaMostrarListaCompleta = ref(true);
                 <div class="flex flex-col">
                     <small class="break-all" :title="devolverDescripcionDeOperacion(operacion)">
                         {{ $t("nombreOperacion") }}:
-                        <a href="#">
+                        <a :href="enlaceOperacion(operacion)">
                             {{ operacion.nombre }}
                         </a>
                     </small>
@@ -371,7 +393,7 @@ const deberiaMostrarListaCompleta = ref(true);
                 <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
                     v-for="(operacion, indice) in operacionesFiltradas">
                     <p>
-                        <a href="#">
+                        <a class="hover:text-blue-700" :href="enlaceOperacion(operacion)">
                             {{ operacion.nombre }}
                         </a>
                         <small class="text-xs">: {{ devolverDescripcionDeOperacion(operacion) }}</small>

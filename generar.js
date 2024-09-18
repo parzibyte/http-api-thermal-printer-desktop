@@ -65,7 +65,7 @@ ${operacion.descripcion}
 ${avisoHtmlEspañol(operacion)}
 
 
-[Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=${operacion.nombre})
 
 ## Argumentos
 `;
@@ -111,8 +111,8 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 ## Ejemplo (JavaScript lado del cliente)
 
 ### Área de pruebas
-[Pruébalo en el área de pruebas](../playground.md?operacion=${operacion.nombre})
-<Playground nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
+[Pruébalo en el área de pruebas](../area-pruebas.md?operacion=${operacion.nombre})
+<Playground urlBase="../.." nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
 
 ### Ejemplo de código
 \`\`\`js
@@ -186,7 +186,7 @@ ${avisoHtmlIngles(operacion)}
 ## Arguments
 `;
         if (operacion.argumentos.length === 0) {
-            texto += "This operation does not have arguments. Just send the `argumentos` array empty";
+            texto += "This operation does not have arguments. Just send the `argumentos` array empty\n\n";
         }
         let indice = 0;
         for (const argumento of operacion.argumentos) {
@@ -230,7 +230,7 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 ### Playground
 [Try it on the Playground](../playground.md?operacion=${operacion.nombre})
 
-<Playground nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion="${operacion.nombre}" :ocultarOperacionesDisponibles="true"/>
 
 ### Code example
 \`\`\`js

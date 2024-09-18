@@ -6,7 +6,7 @@ to be used with the plugin by using the Playground below.
 If it works, you may now go to the API description to
 start printing programatically
 
-<Playground nombreOperacion='EscribirTexto' :ocultarOperacionesDisponibles="true"/>
+<Playground urlBase=".." nombreOperacion='EscribirTexto' :ocultarOperacionesDisponibles="true"/>
 
 ## Troubleshooting
 
