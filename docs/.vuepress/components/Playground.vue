@@ -32,7 +32,7 @@ const operacionesFiltradas = computed(() => {
         return false;
     })
 });
-const arregloDeOperaciones = ref([]);
+const operacionesElegidasPorUsuario = ref([]);
 const agregarOperacion = (operacion, argumentos = []) => {
     const limpia = JSON.parse(JSON.stringify(operacion));
     limpia.expandida = false;
@@ -46,7 +46,7 @@ const agregarOperacion = (operacion, argumentos = []) => {
     for (let i = 0; i < argumentos.length; i++) {
         limpia.argumentos[i].valor = argumentos[i].valor;
     }
-    arregloDeOperaciones.value.push(limpia);
+    operacionesElegidasPorUsuario.value.push(limpia);
 }
 
 
@@ -57,7 +57,7 @@ const obtenerJsonResultante = computed(() => {
     const jsonResultante = {
         serial: licencia.value,
         nombreImpresora: impresoraSeleccionada.value,
-        operaciones: arregloDeOperaciones.value.map(operacion => {
+        operaciones: operacionesElegidasPorUsuario.value.map(operacion => {
             return {
                 nombre: operacion.nombre,
                 argumentos: operacion.argumentos.map(argumento => {
@@ -122,7 +122,7 @@ const refrescarImpresoras = async () => {
 }
 
 const eliminarOperacion = (indice) => {
-    arregloDeOperaciones.value.splice(indice, 1);
+    operacionesElegidasPorUsuario.value.splice(indice, 1);
 }
 const deberiaDeshabilitarBoton = computed(() => {
     if (!url.value) {
@@ -133,7 +133,7 @@ const deberiaDeshabilitarBoton = computed(() => {
         return true;
     }
 
-    if (arregloDeOperaciones.value.length <= 0) {
+    if (operacionesElegidasPorUsuario.value.length <= 0) {
         return true;
     }
     return false;
@@ -269,7 +269,7 @@ const etiquetaParaBotonCompartir = computed(() => {
 });
 
 const compartir = async () => {
-    const operacionesBase64 = encodeURIComponent(encode(JSON.stringify(arregloDeOperaciones.value)));
+    const operacionesBase64 = encodeURIComponent(encode(JSON.stringify(operacionesElegidasPorUsuario.value)));
     const texto = window.location.origin + window.location.pathname + "?operaciones=" + operacionesBase64;
     try {
         await navigator.clipboard.writeText(texto);
@@ -322,14 +322,15 @@ const deberiaMostrarListaCompleta = ref(true);
 <template>
     <div class="flex flex-col">
         <div>
-            <div class="bg-green-400 text-white p-2 rounded-md" v-if="detallesPlugin.plataforma === 'Desktop'">
+            <div class="dark:bg-green-700 dark:text-slate-300 bg-green-400 text-white p-2 rounded-md"
+                v-if="detallesPlugin.plataforma === 'Desktop'">
                 <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }}
             </div>
-            <div class="bg-red-500 text-white p-2 rounded-md"
+            <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 text-white p-2 rounded-md"
                 v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
                 {{ $t("pluginNoDetectado") }} {{ mensajeErrorVersion }}
                 <br>
-                <a class="text-white" :href="enlaceDescargarPlugin()">{{ $t("guiaDescarga") }}</a>
+                <a class="dark:text-gray-200 text-white" :href="enlaceDescargarPlugin()">{{ $t("guiaDescarga") }}</a>
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
             <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
@@ -337,10 +338,10 @@ const deberiaMostrarListaCompleta = ref(true);
                 :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
                 :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
-            <div class="bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
+            <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
                 {{ $t("noHayImpresoras") }}
                 <br>
-                <a :href="enlaceCompartirImpresora()">{{ $t("guiaCompartirImpresoras") }}</a>
+                <a class="text-white dark:text-gray-200" :href="enlaceCompartirImpresora()">{{ $t("guiaCompartirImpresoras") }}</a>
                 <br>
                 <MiBoton @click="refrescarImpresoras()" tipo="info">{{ $t("refrescarImpresoras") }}</MiBoton>
             </div>
@@ -349,13 +350,13 @@ const deberiaMostrarListaCompleta = ref(true);
 
     <div class="flex flex-row">
         <div class="flex w-1/2 flex-col">
-            <p v-show="arregloDeOperaciones.length <= 0">{{ $t("seleccionaUnaOperacion") }}</p>
-            <div class="p-2 bg-gray-200 mb-1 rounded-md hover:bg-gray-300"
-                v-for="(operacion, indiceOperacion) in arregloDeOperaciones">
+            <p v-show="operacionesElegidasPorUsuario.length <= 0">{{ $t("seleccionaUnaOperacion") }}</p>
+            <div class="p-2 dark:bg-gray-700 bg-gray-200 mb-1 rounded-md hover:bg-gray-300"
+                v-for="(operacion, indiceOperacion) in operacionesElegidasPorUsuario">
                 <div class="flex flex-col">
                     <small class="break-all" :title="devolverDescripcionDeOperacion(operacion)">
                         {{ $t("nombreOperacion") }}:
-                        <a :href="enlaceOperacion(operacion)">
+                        <a class="dark:hover:text-white hover:text-sky-500" :href="enlaceOperacion(operacion)">
                             {{ operacion.nombre }}
                         </a>
                     </small>
@@ -381,8 +382,8 @@ const deberiaMostrarListaCompleta = ref(true);
             <div class="bg-yellow-500 text-white p-2 rounded-md" v-show="deberiaMostrarAlerta">
                 {{ respuestaHttp }}
             </div>
-            <div class="max-w-fit overflow-auto">
-                <pre><code >{{ codigo }}</code></pre>
+            <div class="max-w-fit overflow-auto dark:bg-gray-700 bg-gray-200 rounded-md p-2">
+                <pre><code class="dark:text-gray-400 text-gray-700 bg-gray-200 dark:bg-gray-700">{{ codigo }}</code></pre>
             </div>
         </div>
 
@@ -398,10 +399,10 @@ const deberiaMostrarListaCompleta = ref(true);
         <div class="flex flex-col" v-show="deberiaMostrarListaCompleta">
             <MiInput type="search" v-model="busqueda" :label="$t('buscar')"></MiInput>
             <div>
-                <div class="p-1 mb-1 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
+                <div class="rounded-md p-1 mb-1 dark:hover:bg-gray-700 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
                     v-for="(operacion, indice) in operacionesFiltradas">
                     <p>
-                        <a class="hover:text-blue-700" :href="enlaceOperacion(operacion)">
+                        <a class="hover:text-gray-500 dark:hover:text-gray-200" :href="enlaceOperacion(operacion)">
                             {{ operacion.nombre }}
                         </a>
                         <small class="text-xs">: {{ devolverDescripcionDeOperacion(operacion) }}</small>

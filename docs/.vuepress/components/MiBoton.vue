@@ -11,8 +11,8 @@ const propiedades = withDefaults(defineProps<PropiedadesDelComponente>(), {
 });
 const clasesSegunTipo = computed(() => {
     return {
-        "bg-red-500 hover:bg-red-400 focus:bg-red-400 disabled:bg-red-200": propiedades.tipo === "danger",
-        "bg-sky-500 hover:bg-sky-400 focus:bg-sky-400 disabled:bg-sky-200": propiedades.tipo === "info",
+        "dark:bg-red-800 dark:hover:bg-red-700 bg-red-500 hover:bg-red-400 focus:bg-red-400 disabled:bg-red-200": propiedades.tipo === "danger",
+        "dark:bg-sky-800 dark:hover:bg-sky-700 bg-sky-500 hover:bg-sky-400 focus:bg-sky-400 disabled:bg-sky-200 dark:disabled:bg-sky-950 disabled:cursor-not-allowed": propiedades.tipo === "info",
         "bg-green-500 hover:bg-green-400 focus:bg-green-400 disabled:bg-green-200": propiedades.tipo === "success",
         "bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 disabled:bg-indigo-200": propiedades.tipo === "primary",
         "bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 disabled:bg-yellow-200": propiedades.tipo === "warning",

@@ -23,7 +23,7 @@ const clasesSegunValidacion = () => {
     if (propiedades.mensajeValidacion) {
         return "focus:border-red-500 border-red-500";
     }
-    return "focus:border-blue-500";
+    return "focus:border-blue-500 dark:border-blue-700";
 }
 </script>
 <template>
