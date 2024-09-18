@@ -3,7 +3,7 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  base: "/dist/",
+  base: "/http-esc-pos-desktop-docs/",
   locales: {
     "/es/": {
       lang: "es-ES",

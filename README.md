@@ -24,3 +24,19 @@ v20.15.1
 2. `npm run docs:dev`
 
 En otra terminal ejecutar Tailwind
+
+
+# Compilando
+1. Compila el CSS y minifícalo:
+
+```bash
+npx tailwindcss -i ./docs/.vuepress/styles/entrada.css -o ./docs/.vuepress/styles/estilos.css  --minify
+```
+
+2. Ejecuta:
+```bash
+npm run docs:build
+```
+
+3. Distribuye el contenido `docs\.vuepress\dist`. Recuerda que la base
+path se encuentra en `config.js`
