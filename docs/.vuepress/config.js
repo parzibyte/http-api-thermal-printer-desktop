@@ -7,8 +7,8 @@ export default defineUserConfig({
   locales: {
     "/es/": {
       lang: "es-ES",
-      title: "Plugin comandos ESC POS impresora térmica",
-      description: "Documentación de la API HTTP REST para controlar cualquier impresora térmica conectada por cable USB y enviarle comandos ESC POS desde cualquier lenguaje de programación",
+      title: "Plugin HTTP a ESC POS",
+      description: "Documentación de la API HTTP REST para impresoras térmicas ESC POS",
     },
     "/": {
       lang: "en-US",
@@ -26,6 +26,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     locales: {
       "/es/": {
+        lastUpdatedText: "Última actualización",
         prev: "Anterior",
         next: "Siguiente",
         selectLanguageName: "Español",

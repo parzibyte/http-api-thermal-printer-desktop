@@ -1,21 +1,15 @@
-# Compatible printers
-Here you will find a list of
-thermal printers that work well
-with this plugin. The plugin should be
-compatible with any printer that supports
-the ESC POS protocol
+# Impresoras compatibles
+Aquí encontrarás una lista de impresoras térmicas que funcionan bien con este plugin. El plugin debería ser compatible con cualquier impresora que soporte el protocolo ESC POS.
 
-This list is not exhaustive, it only contains
-the printers that users have reported. Just
-because your printer does not appears here does not
-mean that it is not compatible
+Esta lista no es exhaustiva, solo contiene las impresoras que los usuarios han reportado. Si tu impresora no aparece aquí, no significa que no sea compatible.
 
-| Printer name| Picture | Additional info |
+
+| Modelo de impresora ESC POS | Foto | Información adicional |
 |-- | -- | -- |
-| Xprinter 58 | ![Xprinter 58](./printers_pictures/xprinter_58.jpg) | 
-| GOOJPRT PT-210 MTP-II |![GOOJPRT PT-210 MTP-II](./printers_pictures/goojprt_pt-210_mtp-ii.jpg) | 
-| Equal IT-003| ![Equal IT-003](./printers_pictures/equal_IT-003.jpg) | |
+| Xprinter 58 | ![Xprinter 58](../printers_pictures/xprinter_58.jpg) | 
+| GOOJPRT PT-210 MTP-II |![GOOJPRT PT-210 MTP-II](../printers_pictures/goojprt_pt-210_mtp-ii.jpg) | 
+| Equal IT-003| ![Equal IT-003](../printers_pictures/equal_IT-003.jpg) | |
 | 3nstar  | | |
 | BTS-T80B | | |
-| POS-58 D| ![POS-58 D](./printers_pictures/POS-58%20D.png) | |
-| Bixolon SRP-350 | ![Bixolon SRP-350 ](./printers_pictures/Bixolon_SRP-350.jpg) | |
+| POS-58 D| ![POS-58 D](../printers_pictures/POS-58%20D.png) | |
+| Bixolon SRP-350 | ![Bixolon SRP-350 ](../printers_pictures/Bixolon_SRP-350.jpg) | |
