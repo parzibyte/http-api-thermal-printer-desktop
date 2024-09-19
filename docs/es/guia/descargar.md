@@ -18,7 +18,7 @@ A veces el navegador web o el sistema operativo bloquea la descarga. Si los enla
 
 Una vez descargado, **extrae y ejecuta el plugin** dándole los permisos que solicita. No mostrará ninguna ventana excepto en Windows al obtener
 la lista de impresoras.
-Siempre puedes detenerlo desde la barra de tareas.
+Siempre puedes detenerlo desde el administrador de tareas.
 
 :::warning
 En Windows, el plugin viene con una DLL. Mantén esa DLL en el mismo directorio que el plugin.
