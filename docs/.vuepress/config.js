@@ -6,7 +6,7 @@ export default defineUserConfig({
   base: "/http-esc-pos-desktop-docs/",
   locales: {
     "/es/": {
-      lang: "es-ES",
+      lang: "es",
       title: "Plugin HTTP a ESC POS",
       description: "Documentación de la API HTTP REST para impresoras térmicas ESC POS",
     },
@@ -26,6 +26,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     locales: {
       "/es/": {
+        selectLanguageText: "Idioma",
         lastUpdatedText: "Última actualización",
         prev: "Anterior",
         next: "Siguiente",
