@@ -23,7 +23,7 @@ Enable or disable 90 degrees rotation
 
 **Type:** `bool`
 
-**Example:** ``
+**Example:** `true`
 
 ## Operation example
 

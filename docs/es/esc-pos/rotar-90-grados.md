@@ -20,7 +20,7 @@ Habilita o deshabilita la rotación de 90 grados
 
 **Tipo:** `bool`
 
-**Ejemplo:** ``
+**Ejemplo:** `true`
 
 ## Ejemplo
 

@@ -266,8 +266,8 @@ export const operacionesDisponibles = [
                 "tipo": "bool",
                 "descripcion": "Habilita o deshabilita rotación de 90 grados",
                 "descripcion_ingles": "Enable or disable 90 degres text rotation",
-                "ejemplo": "",
-                "ejemplo_ingles": ""
+                "ejemplo": "true",
+                "ejemplo_ingles": "true"
             }
         ]
     },
@@ -773,8 +773,8 @@ export const operacionesDisponibles = [
                 "tipo": "string",
                 "descripcion": "Contenido del código de barras",
                 "descripcion_ingles": "Barcode content",
-                "ejemplo": "",
-                "ejemplo_ingles": ""
+                "ejemplo": "50123452",
+                "ejemplo_ingles": "50123452"
             },
             {
                 "id": 52,
@@ -789,10 +789,10 @@ export const operacionesDisponibles = [
                 "id": 53,
                 "nombre": "alto",
                 "tipo": "float64",
-                "descripcion": "",
-                "descripcion_ingles": "",
-                "ejemplo": "",
-                "ejemplo_ingles": ""
+                "descripcion": "Altura del código de barras",
+                "descripcion_ingles": "Barcode height",
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 44,

@@ -20,7 +20,7 @@ Imprime un código de barras en formato PDF417. El algoritmo se refiere al algor
 
 **Tipo:** `string`
 
-**Ejemplo:** ``
+**Ejemplo:** `50123452`
 
 ### Nivel de seguridad (`argumentos[1]`)
 
@@ -34,17 +34,17 @@ Imprime un código de barras en formato PDF417. El algoritmo se refiere al algor
 
 **Ejemplo:** `1`
 
-###  (`argumentos[2]`)
+### Altura del código de barras (`argumentos[2]`)
 
 
 
-**Descripción:** 
+**Descripción:** Altura del código de barras
 
 **Índice:** `2`
 
 **Tipo:** `float64`
 
-**Ejemplo:** ``
+**Ejemplo:** `80`
 
 ### Alto del código de barras (`argumentos[3]`)
 
@@ -83,9 +83,9 @@ No olvides revisar el tipo de dato de cada argumento
 {
   "nombre": "ImprimirCodigoDeBarrasPdf417",
   "argumentos": [
-    "",
+    "50123452",
     1,
-    "",
+    80,
     20,
     0
   ]
@@ -116,9 +116,9 @@ const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
       "nombre": "ImprimirCodigoDeBarrasPdf417",
       "argumentos": [
-        "",
+        "50123452",
         1,
-        "",
+        80,
         20,
         0
       ]
@@ -152,9 +152,9 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
     {
       "nombre": "ImprimirCodigoDeBarrasPdf417",
       "argumentos": [
-        "",
+        "50123452",
         1,
-        "",
+        80,
         20,
         0
       ]
@@ -168,5 +168,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["",1,"",20,0]}]}
+{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,20,0]}]}
 ```

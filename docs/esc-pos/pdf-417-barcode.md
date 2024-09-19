@@ -23,7 +23,7 @@ Print a barcode in PDF417 format. The algorithm refers to the algorithm used to 
 
 **Type:** `string`
 
-**Example:** ``
+**Example:** `50123452`
 
 ### Security level (`argumentos[1]`)
 
@@ -37,17 +37,17 @@ Print a barcode in PDF417 format. The algorithm refers to the algorithm used to 
 
 **Example:** `1`
 
-###  (`argumentos[2]`)
+### Barcode height (`argumentos[2]`)
 
 
 
-**Description:** 
+**Description:** Barcode height
 
 **Index:** `2`
 
 **Type:** `float64`
 
-**Example:** ``
+**Example:** `80`
 
 ### Barcode height (`argumentos[3]`)
 
@@ -89,9 +89,9 @@ Don't forget to check every argument type
 {
   "nombre": "ImprimirCodigoDeBarrasPdf417",
   "argumentos": [
-    "",
+    "50123452",
     1,
-    "",
+    80,
     20,
     0
   ]
@@ -121,9 +121,9 @@ const httpResponse = await fetch("http://localhost:8000/imprimir",
     {
       "nombre": "ImprimirCodigoDeBarrasPdf417",
       "argumentos": [
-        "",
+        "50123452",
         1,
-        "",
+        80,
         20,
         0
       ]
@@ -157,9 +157,9 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
     {
       "nombre": "ImprimirCodigoDeBarrasPdf417",
       "argumentos": [
-        "",
+        "50123452",
         1,
-        "",
+        80,
         20,
         0
       ]
@@ -173,5 +173,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["",1,"",20,0]}]}
+{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,20,0]}]}
 ```
