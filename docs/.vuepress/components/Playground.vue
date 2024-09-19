@@ -324,7 +324,7 @@ const deberiaMostrarListaCompleta = ref(true);
         <div>
             <div class="dark:bg-green-700 dark:text-slate-300 bg-green-400 text-white p-2 rounded-md"
                 v-if="detallesPlugin.plataforma === 'Desktop'">
-                <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }}
+                <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }} {{detallesPlugin.version}}
             </div>
             <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 text-white p-2 rounded-md"
                 v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
@@ -379,7 +379,7 @@ const deberiaMostrarListaCompleta = ref(true);
                 <MiBoton @click="compartir" :disabled="deberiaDeshabilitarBoton">{{ etiquetaParaBotonCompartir }}
                 </MiBoton>
             </div>
-            <div class="bg-yellow-500 text-white p-2 rounded-md" v-show="deberiaMostrarAlerta">
+            <div class="dark:bg-yellow-700 bg-yellow-500 text-white p-2 rounded-md my-1" v-show="deberiaMostrarAlerta">
                 {{ respuestaHttp }}
             </div>
             <div class="max-w-fit overflow-auto dark:bg-gray-700 bg-gray-200 rounded-md p-2">
