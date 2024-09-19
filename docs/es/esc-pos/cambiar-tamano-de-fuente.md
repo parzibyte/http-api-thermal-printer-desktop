@@ -45,11 +45,11 @@ No olvides revisar el tipo de dato de cada argumento
 
 ```json
 {
-  "nombre": "EstablecerTamañoFuente",
-  "argumentos": [
-    2,
-    2
-  ]
+    "nombre": "EstablecerTamañoFuente",
+    "argumentos": [
+      2,
+      2
+    ]
 }
 ```
 
@@ -67,25 +67,23 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Ejemplo de código
 ```js
+const cargaUtil = {
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "EstablecerTamañoFuente",
+        "argumentos": [
+          2,
+          2
+        ]
+      }
+    ]
+};
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify({
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EstablecerTamañoFuente",
-      "argumentos": [
-        2,
-        2
-      ]
-    }
-  ]
-}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(cargaUtil),
     });
 
 const respuestaComoJson = await respuestaHttp.json();
@@ -104,17 +102,17 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 
 ```json
 {
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EstablecerTamañoFuente",
-      "argumentos": [
-        2,
-        2
-      ]
-    }
-  ]
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "EstablecerTamañoFuente",
+        "argumentos": [
+          2,
+          2
+        ]
+      }
+    ]
 }
 ```
 
@@ -123,5 +121,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"EstablecerTamañoFuente","argumentos":[2,2]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"EstablecerTamañoFuente","argumentos":[2,2]}]}
 ```

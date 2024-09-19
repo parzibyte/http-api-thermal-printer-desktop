@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const carpetaIngles = "esc-pos";
 const carpetaEspañol = "es/esc-pos";
 
-const operacionNecesitaWkhtmlToImage = (operacion)=>{
+const operacionNecesitaWkhtmlToImage = (operacion) => {
     if (["GenerarImagenAPartirDeHtmlEImprimir", "GenerarImagenAPartirDePaginaWebEImprimir"].includes(operacion.nombre)) {
         return true;
     }
@@ -99,7 +99,7 @@ No olvides revisar el tipo de dato de cada argumento
 
 
 \`\`\`json
-${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
+${formatearJSON(obtenerParaUnaOperacionEspañol(operacion), 2)}
 \`\`\`
 
 
@@ -116,13 +116,11 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 
 ### Ejemplo de código
 \`\`\`js
+const cargaUtil = ${formatearJSON(obtenerObjetoEspañol(operacion), 2)};
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify(${JSON.stringify(obtenerObjeto(operacion), null, 2)}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(cargaUtil),
     });
 
 const respuestaComoJson = await respuestaHttp.json();
@@ -140,7 +138,7 @@ if (respuestaComoJson.ok) {
 Codifica el siguiente JSON y envíalo a \`http://localhost:8000/imprimir\` con el método POST
 
 \`\`\`json
-${JSON.stringify(obtenerObjeto(operacion), null, 2)}
+${formatearJSON(obtenerObjetoEspañol(operacion), 2)}
 \`\`\`
 
 ## JSON de ejemplo codificado
@@ -148,7 +146,7 @@ ${JSON.stringify(obtenerObjeto(operacion), null, 2)}
 Envía esta cadena JSON ya codificada a \`http://localhost:8000/imprimir\` con el método POST
 
 \`\`\`
-${JSON.stringify(obtenerObjeto(operacion))}
+${JSON.stringify(obtenerObjetoEspañol(operacion))}
 \`\`\`
 `;
         const relativa = carpetaEspañol + "/" + normalizarNombre(operacion.nombre_corto) + ".md";
@@ -218,7 +216,7 @@ Don't forget to check every argument type
 
 
 \`\`\`json
-${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
+${formatearJSON(obtenerParaUnaOperacion(operacion), 4)}
 \`\`\`
 
 ::: tip
@@ -234,13 +232,11 @@ ${JSON.stringify(obtenerParaUnaOperacion(operacion), null, 2)}
 
 ### Code example
 \`\`\`js
+const payload = ${formatearJSON(obtenerObjeto(operacion), 2)};
 const httpResponse = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify(${JSON.stringify(obtenerObjeto(operacion), null, 2)}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(payload),
     });
 
 const jsonResponse = await httpResponse.json();
@@ -258,7 +254,7 @@ if (jsonResponse.ok) {
 Encode this JSON and send it to \`http://localhost:8000/imprimir\` with POST method
 
 \`\`\`json
-${JSON.stringify(obtenerObjeto(operacion), null, 2)}
+${formatearJSON(obtenerObjeto(operacion), 2)}
 \`\`\`
 
 ## Example JSON (encoded)
@@ -285,6 +281,29 @@ ${JSON.stringify(obtenerObjeto(operacion))}
 }
 
 
+function formatearJSON(obj, spaces) {
+    const jsonStr = JSON.stringify(obj, null, spaces);
+    const indentBase = ' '.repeat(spaces);
+    
+    return jsonStr.split('\n').map((line, index) => {
+        return index === 0 || index === jsonStr.split('\n').length - 1
+            ? line 
+            : indentBase + line;
+    }).join('\n');
+}
+
+const obtenerArgumentosEspañol = (operacion) => {
+    return operacion.argumentos.map((argumento) => {
+        if (argumento.tipo === "bool") {
+            if (argumento.ejemplo === "false") {
+                return false;
+            }
+            return true;
+        }
+        return argumento.ejemplo;
+    })
+}
+
 const obtenerArgumentos = (operacion) => {
     return operacion.argumentos.map((argumento) => {
         if (argumento.tipo === "bool") {
@@ -297,6 +316,13 @@ const obtenerArgumentos = (operacion) => {
     })
 }
 
+const obtenerParaUnaOperacionEspañol = operacion => {
+    return {
+        nombre: operacion.nombre,
+        argumentos: obtenerArgumentosEspañol(operacion),
+    }
+}
+
 const obtenerParaUnaOperacion = operacion => {
     return {
         nombre: operacion.nombre,
@@ -304,10 +330,20 @@ const obtenerParaUnaOperacion = operacion => {
     }
 }
 
-const obtenerObjeto = operacion => {
+const obtenerObjetoEspañol = (operacion) => {
     return {
         "serial": "",
-        "nombreImpresora": "your_printers_name",
+        "nombreImpresora": "Nombre_impresora",
+        "operaciones": [
+            obtenerParaUnaOperacionEspañol(operacion)
+        ]
+    }
+}
+
+const obtenerObjeto = (operacion) => {
+    return {
+        "serial": "",
+        "nombreImpresora": "Printers_name",
         "operaciones": [
             obtenerParaUnaOperacion(operacion)
         ]

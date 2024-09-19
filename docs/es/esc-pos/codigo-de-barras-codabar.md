@@ -69,13 +69,13 @@ No olvides revisar el tipo de dato de cada argumento
 
 ```json
 {
-  "nombre": "ImprimirCodigoDeBarrasCodabar",
-  "argumentos": [
-    "D387266D",
-    20,
-    380,
-    0
-  ]
+    "nombre": "ImprimirCodigoDeBarrasCodabar",
+    "argumentos": [
+      "D387266D",
+      20,
+      380,
+      0
+    ]
 }
 ```
 
@@ -93,27 +93,25 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Ejemplo de código
 ```js
+const cargaUtil = {
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "ImprimirCodigoDeBarrasCodabar",
+        "argumentos": [
+          "D387266D",
+          20,
+          380,
+          0
+        ]
+      }
+    ]
+};
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify({
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "ImprimirCodigoDeBarrasCodabar",
-      "argumentos": [
-        "D387266D",
-        20,
-        380,
-        0
-      ]
-    }
-  ]
-}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(cargaUtil),
     });
 
 const respuestaComoJson = await respuestaHttp.json();
@@ -132,19 +130,19 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 
 ```json
 {
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "ImprimirCodigoDeBarrasCodabar",
-      "argumentos": [
-        "D387266D",
-        20,
-        380,
-        0
-      ]
-    }
-  ]
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "ImprimirCodigoDeBarrasCodabar",
+        "argumentos": [
+          "D387266D",
+          20,
+          380,
+          0
+        ]
+      }
+    ]
 }
 ```
 
@@ -153,5 +151,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCodabar","argumentos":["D387266D",20,380,0]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCodabar","argumentos":["D387266D",20,380,0]}]}
 ```

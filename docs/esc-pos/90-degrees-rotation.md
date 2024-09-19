@@ -39,10 +39,10 @@ Don't forget to check every argument type
 
 ```json
 {
-  "nombre": "EstablecerRotacionDe90Grados",
-  "argumentos": [
-    true
-  ]
+        "nombre": "EstablecerRotacionDe90Grados",
+        "argumentos": [
+            true
+        ]
 }
 ```
 
@@ -59,24 +59,22 @@ Don't forget to check every argument type
 
 ### Code example
 ```js
+const payload = {
+    "serial": "",
+    "nombreImpresora": "Printers_name",
+    "operaciones": [
+      {
+        "nombre": "EstablecerRotacionDe90Grados",
+        "argumentos": [
+          true
+        ]
+      }
+    ]
+};
 const httpResponse = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify({
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EstablecerRotacionDe90Grados",
-      "argumentos": [
-        true
-      ]
-    }
-  ]
-}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(payload),
     });
 
 const jsonResponse = await httpResponse.json();
@@ -95,16 +93,16 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 
 ```json
 {
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EstablecerRotacionDe90Grados",
-      "argumentos": [
-        true
-      ]
-    }
-  ]
+    "serial": "",
+    "nombreImpresora": "Printers_name",
+    "operaciones": [
+      {
+        "nombre": "EstablecerRotacionDe90Grados",
+        "argumentos": [
+          true
+        ]
+      }
+    ]
 }
 ```
 
@@ -113,5 +111,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"EstablecerRotacionDe90Grados","argumentos":[true]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"EstablecerRotacionDe90Grados","argumentos":[true]}]}
 ```

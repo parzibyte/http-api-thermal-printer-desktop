@@ -57,12 +57,12 @@ No olvides revisar el tipo de dato de cada argumento
 
 ```json
 {
-  "nombre": "TextoSegunPaginaDeCodigos",
-  "argumentos": [
-    2,
-    "cp850",
-    "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
-  ]
+    "nombre": "TextoSegunPaginaDeCodigos",
+    "argumentos": [
+      2,
+      "cp850",
+      "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
+    ]
 }
 ```
 
@@ -80,26 +80,24 @@ No olvides revisar el tipo de dato de cada argumento
 
 ### Ejemplo de código
 ```js
+const cargaUtil = {
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "TextoSegunPaginaDeCodigos",
+        "argumentos": [
+          2,
+          "cp850",
+          "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
+        ]
+      }
+    ]
+};
 const respuestaHttp = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify({
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "TextoSegunPaginaDeCodigos",
-      "argumentos": [
-        2,
-        "cp850",
-        "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
-      ]
-    }
-  ]
-}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(cargaUtil),
     });
 
 const respuestaComoJson = await respuestaHttp.json();
@@ -118,18 +116,18 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 
 ```json
 {
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "TextoSegunPaginaDeCodigos",
-      "argumentos": [
-        2,
-        "cp850",
-        "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
-      ]
-    }
-  ]
+    "serial": "",
+    "nombreImpresora": "Nombre_impresora",
+    "operaciones": [
+      {
+        "nombre": "TextoSegunPaginaDeCodigos",
+        "argumentos": [
+          2,
+          "cp850",
+          "Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"
+        ]
+      }
+    ]
 }
 ```
 
@@ -138,5 +136,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"TextoSegunPaginaDeCodigos","argumentos":[2,"cp850","Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"TextoSegunPaginaDeCodigos","argumentos":[2,"cp850","Grim, Guayaba, Maggie y Panqué toman el té con la cigüeña de María José"]}]}
 ```

@@ -40,10 +40,10 @@ Don't forget to check every argument type
 
 ```json
 {
-  "nombre": "EscribirTexto",
-  "argumentos": [
-    "Hello printer\n"
-  ]
+        "nombre": "EscribirTexto",
+        "argumentos": [
+            "Hello printer\n"
+        ]
 }
 ```
 
@@ -60,24 +60,22 @@ Don't forget to check every argument type
 
 ### Code example
 ```js
+const payload = {
+    "serial": "",
+    "nombreImpresora": "Printers_name",
+    "operaciones": [
+      {
+        "nombre": "EscribirTexto",
+        "argumentos": [
+          "Hello printer\n"
+        ]
+      }
+    ]
+};
 const httpResponse = await fetch("http://localhost:8000/imprimir",
     {
         method: "POST",
-        body: JSON.stringify({
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EscribirTexto",
-      "argumentos": [
-        "Hello printer\n"
-      ]
-    }
-  ]
-}),
-        headers: {
-            "Content-Type": "application/json",
-        },
+        body: JSON.stringify(payload),
     });
 
 const jsonResponse = await httpResponse.json();
@@ -96,16 +94,16 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 
 ```json
 {
-  "serial": "",
-  "nombreImpresora": "your_printers_name",
-  "operaciones": [
-    {
-      "nombre": "EscribirTexto",
-      "argumentos": [
-        "Hello printer\n"
-      ]
-    }
-  ]
+    "serial": "",
+    "nombreImpresora": "Printers_name",
+    "operaciones": [
+      {
+        "nombre": "EscribirTexto",
+        "argumentos": [
+          "Hello printer\n"
+        ]
+      }
+    ]
 }
 ```
 
@@ -114,5 +112,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"your_printers_name","operaciones":[{"nombre":"EscribirTexto","argumentos":["Hello printer\n"]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"EscribirTexto","argumentos":["Hello printer\n"]}]}
 ```
