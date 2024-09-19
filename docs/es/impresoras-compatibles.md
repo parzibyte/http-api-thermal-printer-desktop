@@ -13,3 +13,5 @@ Esta lista no es exhaustiva, solo contiene las impresoras que los usuarios han r
 | BTS-T80B | | |
 | POS-58 D| ![POS-58 D](../printers_pictures/POS-58%20D.png) | |
 | Bixolon SRP-350 | ![Bixolon SRP-350 ](../printers_pictures/Bixolon_SRP-350.jpg) | |
+| Digital POS DIG - E200I| ![Digital POS DIG - E200I](../printers_pictures/DigitalPos_DIG_E200I.jpg) | |
+| BT-80UBW | ![BT-80UBW](../printers_pictures/BT-80UBW.jpg) | |
