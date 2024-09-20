@@ -8,7 +8,7 @@ actions:
     type: primary
 
   - text: Descripción de la API
-    link: /es/api/introduction.md
+    link: /es/api/introduccion.md
     type: secondary
 
 features:
