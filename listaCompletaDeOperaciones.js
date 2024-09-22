@@ -413,9 +413,9 @@ export const operacionesDisponibles = [
                 "id": 19,
                 "nombre": "ruta",
                 "tipo": "string",
-                "descripcion": "Relative or absolute path to image",
+                "descripcion": "Ruta absoluta (o relativa al plugin) de la imagen",
                 "descripcion_ingles": "Relative or absolute path to image",
-                "ejemplo": "C:\\Users\\your_user\\Desktop\\panqué_y_grim.png",
+                "ejemplo": "C:\\Users\\tu_usuario\\Desktop\\Panqué_y_grim.png",
                 "ejemplo_ingles": "C:\\Users\\your_user\\Desktop\\panque_and_grim.png"
             },
             {

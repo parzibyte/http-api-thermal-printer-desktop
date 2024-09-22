@@ -10,17 +10,17 @@ Imprime una imagen existente en el sistema de archivos, suponiendo que el plugin
 [Pruébalo en el área de pruebas](../area-pruebas.md?operacion=CargarImagenLocalEImprimir)
 
 ## Argumentos
-### Relative or absolute path to image (`argumentos[0]`)
+### Ruta absoluta (o relativa al plugin) de la imagen (`argumentos[0]`)
 
 
 
-**Descripción:** Relative or absolute path to image
+**Descripción:** Ruta absoluta (o relativa al plugin) de la imagen
 
 **Índice:** `0`
 
 **Tipo:** `string`
 
-**Ejemplo:** `C:\Users\your_user\Desktop\panqué_y_grim.png`
+**Ejemplo:** `C:\Users\tu_usuario\Desktop\Panqué_y_grim.png`
 
 ### Máximo ancho de la imagen. Si el verdadero ancho es mayor, se reducirá (`argumentos[1]`)
 
@@ -71,7 +71,7 @@ No olvides revisar el tipo de dato de cada argumento
 {
     "nombre": "CargarImagenLocalEImprimir",
     "argumentos": [
-      "C:\\Users\\your_user\\Desktop\\panqué_y_grim.png",
+      "C:\\Users\\tu_usuario\\Desktop\\Panqué_y_grim.png",
       380,
       0,
       true
@@ -100,7 +100,7 @@ const cargaUtil = {
       {
         "nombre": "CargarImagenLocalEImprimir",
         "argumentos": [
-          "C:\\Users\\your_user\\Desktop\\panqué_y_grim.png",
+          "C:\\Users\\tu_usuario\\Desktop\\Panqué_y_grim.png",
           380,
           0,
           true
@@ -136,7 +136,7 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
       {
         "nombre": "CargarImagenLocalEImprimir",
         "argumentos": [
-          "C:\\Users\\your_user\\Desktop\\panqué_y_grim.png",
+          "C:\\Users\\tu_usuario\\Desktop\\Panqué_y_grim.png",
           380,
           0,
           true
@@ -151,5 +151,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"CargarImagenLocalEImprimir","argumentos":["C:\\Users\\your_user\\Desktop\\panqué_y_grim.png",380,0,true]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"CargarImagenLocalEImprimir","argumentos":["C:\\Users\\tu_usuario\\Desktop\\Panqué_y_grim.png",380,0,true]}]}
 ```
