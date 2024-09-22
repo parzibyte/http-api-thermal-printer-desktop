@@ -1,26 +1,95 @@
 # Download plugin
 
-In order for this to work, you need to
-download and execute the HTTP to ESC POS plugin according 
-to your platform
+To use the HTTP to ESC POS API you need to download and start
+the server according to your platform.
 
-| Platform | File name | Direct link (try copy and paste if it does not open) | Notes
-| ----     | ----------|----------------------------------------- | ------
-| Windows 64 bits| ESC_POS_3.5.0_W64.zip |[Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip) | 
-| Windows 32 bits| ESC_POS_3.5.0_W32.zip |[Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip) |
-| Raspbian 32 ARMv6 | ESC_POS_3.5.0_Raspbian32.zip | - |
-| Raspbian 64 ARMV64 | ESC_POS_3.5.0_Raspbian64.zip | - |
-| Debian based Linux | ESC_POS_3.5.0_Linux.zip | - |
 
 :::tip
-Sometimes the web browser or operating system blocks the download. If the direct
-links do not work, try going to the [release](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/tag/3.5.0) and choose the right file in **Assets**
+Sometimes web browser or OS block the download. If direct links do not
+work, try going to the [release](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/tag/3.5.0) 
+and choose the right file on the **Assets** section, or copy the direct link. None of my files contain virus.
 :::
 
-Once downloaded, **extract and execute the plugin** giving it the permissions it asks. It does not show any window except on Windows when getting
-printer list.
-You can always stop it from the taskbar
+## Windows 64 bits
+Working with Windows 8, 8.1, 10 and 11
 
-:::warning
-On Windows, the plugin comes with a DLL. Keep that DLL in the same directory as the plugin
+**Filename:** `ESC_POS_3.5.0_W64.zip`
+
+**Download:** [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip)
+
+```plaintext title="Direct link"
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip
+```
+
+:::tip
+Once extracted, if you find a DLL, keep that DLL in the same dir as the plugin. Extract the zip and execute the plugin. It does
+not open any window and you can close it from the task manager
 :::
+
+
+
+## Windows 32 bits
+Working with Windows 8, 8.1, 10 and 11
+
+**Filename:** `ESC_POS_3.5.0_W32.zip`
+
+**Download:** [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W32.zip)
+
+```plaintext title="Direct link"
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W32.zip
+```
+
+:::tip
+Once extracted, if you find a DLL, keep that DLL in the same dir as the plugin. Extract the zip and execute the plugin. It does
+not open any window and you can close it from the task manager
+:::
+
+## Rasbperry Pi
+
+Compiled under following environment:
+
+```bash
+parzibyte@raspberrypi:~/escposv3-main $ uname -a
+Linux raspberrypi 6.1.0-rpi7-rpi-v8 #1 SMP PREEMPT Debian 1:6.1.63-1+rpt1 (2023-11-24) aarch64 GNU/Linux
+parzibyte@raspberrypi:~ $ getconf LONG_BIT
+64
+```
+
+**Filename:** `ESC_POS_3.5.0_RPIARMV64.zip`
+
+**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_RPIARMV64.zip)
+
+```plaintext title="Direct link"
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_RPIARMV64.zip
+```
+
+### Running plugin
+On a terminal navigate to the plugin dir. Then run `./plugin_name`, for example:
+```bash
+parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_RPIARMV64
+```
+
+## Linux (Debian based)
+
+Compiled under following environment:
+```bash
+parzibyte@gigabytepc:~$ uname -a
+Linux gigabytepc 5.4.0-150-generic #167~18.04.1-Ubuntu SMP Wed May 24 00:51:42 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+parzibyte@gigabytepc:~$ getconf LONG_BIT
+64
+```
+
+
+**Filename:** `ESC_POS_3.5.0_Linux64.zip`
+
+**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_Linux64.zip)
+
+```plaintext title="Direct link"
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_Linux64.zip
+```
+
+### Running plugin
+On a terminal navigate to the plugin dir. Then run `./plugin_name`, for example:
+```bash
+parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_Linux64
+```
