@@ -29,7 +29,7 @@ directory where the plugin is being executed
 
 **Type:** `string`
 
-**Example:** `<p><strong>Hello</strong> world!</p>`
+**Example:** `<html><meta charset="UTF-8"><p><strong>Hello</strong> world!</p></html>`
 
 ### Browser's page width in pixels (`argumentos[1]`)
 
@@ -77,7 +77,7 @@ directory where the plugin is being executed
 
 **Type:** `bool`
 
-**Example:** `true`
+**Example:** `false`
 
 ## Operation example
 
@@ -95,11 +95,11 @@ Don't forget to check every argument type
 {
         "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
         "argumentos": [
-            "<p><strong>Hello</strong> world!</p>",
+            "<html><meta charset=\"UTF-8\"><p><strong>Hello</strong> world!</p></html>",
             380,
             380,
             0,
-            true
+            false
         ]
 }
 ```
@@ -124,11 +124,11 @@ const payload = {
       {
         "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
         "argumentos": [
-          "<p><strong>Hello</strong> world!</p>",
+          "<html><meta charset=\"UTF-8\"><p><strong>Hello</strong> world!</p></html>",
           380,
           380,
           0,
-          true
+          false
         ]
       }
     ]
@@ -161,11 +161,11 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
       {
         "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
         "argumentos": [
-          "<p><strong>Hello</strong> world!</p>",
+          "<html><meta charset=\"UTF-8\"><p><strong>Hello</strong> world!</p></html>",
           380,
           380,
           0,
-          true
+          false
         ]
       }
     ]
@@ -177,5 +177,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"GenerarImagenAPartirDeHtmlEImprimir","argumentos":["<p><strong>Hello</strong> world!</p>",380,380,0,true]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"GenerarImagenAPartirDeHtmlEImprimir","argumentos":["<html><meta charset=\"UTF-8\"><p><strong>Hello</strong> world!</p></html>",380,380,0,false]}]}
 ```

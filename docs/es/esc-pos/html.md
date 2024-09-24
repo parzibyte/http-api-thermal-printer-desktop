@@ -26,7 +26,7 @@ donde el plugin se ejecuta
 
 **Tipo:** `string`
 
-**Ejemplo:** `<p><strong>¡Hola</strong> mundo!</p>`
+**Ejemplo:** `<html><meta charset="UTF-8"><p><strong>¡Hola</strong> mundo!</p></html>`
 
 ### Ancho de página del navegador web (`argumentos[1]`)
 
@@ -74,7 +74,7 @@ donde el plugin se ejecuta
 
 **Tipo:** `bool`
 
-**Ejemplo:** `true`
+**Ejemplo:** `false`
 
 ## Ejemplo
 
@@ -89,11 +89,11 @@ No olvides revisar el tipo de dato de cada argumento
 {
     "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
     "argumentos": [
-      "<p><strong>¡Hola</strong> mundo!</p>",
+      "<html><meta charset=\"UTF-8\"><p><strong>¡Hola</strong> mundo!</p></html>",
       380,
       380,
       0,
-      true
+      false
     ]
 }
 ```
@@ -119,11 +119,11 @@ const cargaUtil = {
       {
         "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
         "argumentos": [
-          "<p><strong>¡Hola</strong> mundo!</p>",
+          "<html><meta charset=\"UTF-8\"><p><strong>¡Hola</strong> mundo!</p></html>",
           380,
           380,
           0,
-          true
+          false
         ]
       }
     ]
@@ -156,11 +156,11 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
       {
         "nombre": "GenerarImagenAPartirDeHtmlEImprimir",
         "argumentos": [
-          "<p><strong>¡Hola</strong> mundo!</p>",
+          "<html><meta charset=\"UTF-8\"><p><strong>¡Hola</strong> mundo!</p></html>",
           380,
           380,
           0,
-          true
+          false
         ]
       }
     ]
@@ -172,5 +172,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"GenerarImagenAPartirDeHtmlEImprimir","argumentos":["<p><strong>¡Hola</strong> mundo!</p>",380,380,0,true]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"GenerarImagenAPartirDeHtmlEImprimir","argumentos":["<html><meta charset=\"UTF-8\"><p><strong>¡Hola</strong> mundo!</p></html>",380,380,0,false]}]}
 ```

@@ -525,8 +525,8 @@ export const operacionesDisponibles = [
                 "tipo": "string",
                 "descripcion": "HTML como cadena",
                 "descripcion_ingles": "HTML as string",
-                "ejemplo": `<p><strong>¡Hola</strong> mundo!</p>`,
-                "ejemplo_ingles": `<p><strong>Hello</strong> world!</p>`,
+                "ejemplo": `<html><meta charset="UTF-8"><p><strong>¡Hola</strong> mundo!</p></html>`,
+                "ejemplo_ingles": `<html><meta charset="UTF-8"><p><strong>Hello</strong> world!</p></html>`,
             },
             {
                 "id": 28,
@@ -561,8 +561,8 @@ export const operacionesDisponibles = [
                 "tipo": "bool",
                 "descripcion": "Aplicar algoritmo dithering. Recomendado en fotografías, no ilustraciones",
                 "descripcion_ingles": "Apply dithering algorithm. Recommended on photographies, not illustrations",
-                "ejemplo": "true",
-                "ejemplo_ingles": "true"
+                "ejemplo": "false",
+                "ejemplo_ingles": "false"
             }
         ]
     },
@@ -580,8 +580,8 @@ export const operacionesDisponibles = [
                 "tipo": "string",
                 "descripcion": "URL de la página públicamente accesible",
                 "descripcion_ingles": "Public webpage URL",
-                "ejemplo": "https://google.com",
-                "ejemplo_ingles": "https://google.com"
+                "ejemplo": "https://example.com",
+                "ejemplo_ingles": "https://example.com"
             },
             {
                 "id": 28,
@@ -616,8 +616,8 @@ export const operacionesDisponibles = [
                 "tipo": "bool",
                 "descripcion": "Aplicar algoritmo dithering. Recomendado en fotografías, no ilustraciones",
                 "descripcion_ingles": "Apply dithering algorithm. Recommended on photographies, not illustrations",
-                "ejemplo": "true",
-                "ejemplo_ingles": "true"
+                "ejemplo": "false",
+                "ejemplo_ingles": "false"
             }
         ]
     },
