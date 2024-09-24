@@ -93,14 +93,32 @@ const deberiaMostrarAlerta = ref(false);
 const impresoraSeleccionada = ref("");
 
 const codigo = computed(() => {
-    return `const respuesta = await fetch("${url.value}/imprimir",
-{
+    if (esEspañol()) {
+        return `const cargaUtil = ${JSON.stringify(obtenerJsonResultante.value, null, 2)};
+const respuestaHttp = await fetch("${url.value}/imprimir", {
     method: "POST",
-    body: JSON.stringify(${JSON.stringify(obtenerJsonResultante.value, null, 4)}),
-    headers:{
-    "Content-Type": "application/json",
-},
-    });`
+    body: JSON.stringify(cargaUtil)
+});
+const respuesta = await respuestaHttp.json();
+if (respuesta.ok) {
+    console.log("Impreso correctamente")
+} else {
+    console.error("Petición ok pero error en el plugin: " + respuesta.message);
+}`;
+    } else {
+        return `const payload = ${JSON.stringify(obtenerJsonResultante.value, null, 2)};
+const httpResponse = await fetch("${url.value}/imprimir", {
+    method: "POST",
+    body: JSON.stringify(payload)
+});
+const response = await httpResponse.json();
+if (respuesta.ok) {
+    console.log("Printed successfully")
+} else {
+    console.error("Request OK but plugin error: " + respuesta.message);
+}`;
+    }
+
 });
 
 const respuestaHttp = ref({ ok: false, message: "" });
@@ -324,7 +342,8 @@ const deberiaMostrarListaCompleta = ref(true);
         <div>
             <div class="dark:bg-green-700 dark:text-slate-300 bg-green-400 text-white p-2 rounded-md"
                 v-if="detallesPlugin.plataforma === 'Desktop'">
-                <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }} {{detallesPlugin.version}}
+                <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }} {{ detallesPlugin.version
+                }}
             </div>
             <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 text-white p-2 rounded-md"
                 v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
@@ -338,10 +357,12 @@ const deberiaMostrarListaCompleta = ref(true);
                 :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
                 :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
-            <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 p-2 rounded text-white mb-2" v-if="impresoras.length <= 0">
+            <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 p-2 rounded text-white mb-2"
+                v-if="impresoras.length <= 0">
                 {{ $t("noHayImpresoras") }}
                 <br>
-                <a class="text-white dark:text-gray-200" :href="enlaceCompartirImpresora()">{{ $t("guiaCompartirImpresoras") }}</a>
+                <a class="text-white dark:text-gray-200" :href="enlaceCompartirImpresora()">{{
+                    $t("guiaCompartirImpresoras") }}</a>
                 <br>
                 <MiBoton @click="refrescarImpresoras()" tipo="info">{{ $t("refrescarImpresoras") }}</MiBoton>
             </div>
@@ -399,8 +420,8 @@ const deberiaMostrarListaCompleta = ref(true);
         <div class="flex flex-col" v-show="deberiaMostrarListaCompleta">
             <MiInput type="search" v-model="busqueda" :label="$t('buscar')"></MiInput>
             <div>
-                <div class="rounded-md p-1 mb-1 dark:hover:bg-gray-700 hover:bg-gray-200 hover:cursor-pointer" @click="agregarOperacion(operacion)"
-                    v-for="(operacion, indice) in operacionesFiltradas">
+                <div class="rounded-md p-1 mb-1 dark:hover:bg-gray-700 hover:bg-gray-200 hover:cursor-pointer"
+                    @click="agregarOperacion(operacion)" v-for="(operacion, indice) in operacionesFiltradas">
                     <p>
                         <a class="hover:text-gray-500 dark:hover:text-gray-200" :href="enlaceOperacion(operacion)">
                             {{ operacion.nombre }}
