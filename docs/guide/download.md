@@ -69,6 +69,10 @@ On a terminal navigate to the plugin dir. Then run `./plugin_name`, for example:
 parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_RPIARMV64
 ```
 
+
+Sometimes it may be necessary to give the plugin
+execution permission with `sudo chmod +x ./plugin_name`
+
 ## Linux (Debian based)
 
 Compiled under following environment:
@@ -79,6 +83,8 @@ parzibyte@gigabytepc:~$ getconf LONG_BIT
 64
 ```
 
+Sometimes it may be necessary to give the plugin
+execution permission with `sudo chmod +x ./plugin_name`
 
 **Filename:** `ESC_POS_3.5.0_Linux64.zip`
 

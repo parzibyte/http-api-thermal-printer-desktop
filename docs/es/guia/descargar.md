@@ -66,6 +66,9 @@ En una terminal, navega hasta la ubicación del plugin. Luego ejecuta `./nombre_
 parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_RPIARMV64
 ```
 
+En ocasiones puede que sea necesario que le des permiso de ejecución
+con `sudo chmod +x ./nombre_plugin`
+
 ## Linux basado en Debian
 
 Compilado bajo el siguiente entorno:
@@ -76,6 +79,8 @@ parzibyte@gigabytepc:~$ getconf LONG_BIT
 64
 ```
 
+En ocasiones puede que sea necesario que le des permiso de ejecución
+con `sudo chmod +x ./nombre_plugin`
 
 **Nombre del archivo:** `ESC_POS_3.5.0_Linux64.zip`
 
