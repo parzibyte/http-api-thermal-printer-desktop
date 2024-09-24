@@ -40,3 +40,10 @@ npm run docs:build
 
 3. Distribuye el contenido `docs\.vuepress\dist`. Recuerda que la base
 path se encuentra en `config.js`
+
+# Generando operaciones
+
+`node generar.js`
+
+La primera salida es en inglés, la segunda en español. Van en config.js
+en el sidebar y en el navbar respectivamente
