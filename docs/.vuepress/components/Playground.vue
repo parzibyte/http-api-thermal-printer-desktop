@@ -44,7 +44,7 @@ const agregarOperacion = (operacion, argumentos = []) => {
         }
     }
     for (let i = 0; i < argumentos.length; i++) {
-        limpia.argumentos[i].valor = argumentos[i].valor;
+        limpia.argumentos[i].valor = argumentos[i];
     }
     operacionesElegidasPorUsuario.value.push(limpia);
 }
@@ -142,6 +142,13 @@ const refrescarImpresoras = async () => {
 const eliminarOperacion = (indice) => {
     operacionesElegidasPorUsuario.value.splice(indice, 1);
 }
+
+const deberiaDeshabilitarBotonCompartir = computed(() => {
+    if (operacionesElegidasPorUsuario.value.length <= 0) {
+        return true;
+    }
+    return false;
+});
 const deberiaDeshabilitarBoton = computed(() => {
     if (!url.value) {
         return true;
@@ -224,15 +231,15 @@ onMounted(() => {
         if (posibleArreglo) {
             try {
                 const operacionesDecodificadas = JSON.parse(decode(posibleArreglo));
-                for (const operacion of operacionesDecodificadas) {
-                    const posibleIndice = operacionesDisponibles.findIndex(operacionExistente => {
-                        if (operacion.nombre === operacionExistente.nombre) {
+                for (const operacionExtraidaDeUrl of operacionesDecodificadas) {
+                    const posibleIndice = operacionesDisponibles.findIndex(operacionDisponible => {
+                        if (operacionExtraidaDeUrl.n === operacionDisponible.nombre) {
                             return true;
                         }
                         return false;
                     })
                     if (posibleIndice !== -1) {
-                        agregarOperacion(operacionesDisponibles[posibleIndice], operacion.argumentos);
+                        agregarOperacion(operacionesDisponibles[posibleIndice], operacionExtraidaDeUrl.a);
                     }
                 }
             } catch (e) {
@@ -287,7 +294,14 @@ const etiquetaParaBotonCompartir = computed(() => {
 });
 
 const compartir = async () => {
-    const operacionesBase64 = encodeURIComponent(encode(JSON.stringify(operacionesElegidasPorUsuario.value)));
+    const operacionesParaCompartir = operacionesElegidasPorUsuario.value.map(operacion => {
+        return {
+            n: operacion.nombre,
+            a: operacion.argumentos.map(argumento => argumento.valor)
+        }
+    });
+
+    const operacionesBase64 = encodeURIComponent(encode(JSON.stringify(operacionesParaCompartir)));
     const texto = window.location.origin + window.location.pathname + "?operaciones=" + operacionesBase64;
     try {
         await navigator.clipboard.writeText(texto);
@@ -397,7 +411,8 @@ const deberiaMostrarListaCompleta = ref(true);
         <div class="flex w-1/2 flex-col p-1">
             <div class="flex flex-row">
                 <MiBoton @click="enviar" :disabled="deberiaDeshabilitarBoton">{{ $t("hacerPeticion") }}</MiBoton>
-                <MiBoton @click="compartir" :disabled="deberiaDeshabilitarBoton">{{ etiquetaParaBotonCompartir }}
+                <MiBoton @click="compartir" :disabled="deberiaDeshabilitarBotonCompartir">{{ etiquetaParaBotonCompartir
+                    }}
                 </MiBoton>
             </div>
             <div class="dark:bg-yellow-700 bg-yellow-500 text-white p-2 rounded-md my-1" v-show="deberiaMostrarAlerta">
