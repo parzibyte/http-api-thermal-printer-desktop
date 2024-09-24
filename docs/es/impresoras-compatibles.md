@@ -17,3 +17,6 @@ Esta lista no es exhaustiva, solo contiene las impresoras que los usuarios han r
 | BT-80UBW | ![BT-80UBW](../printers_pictures/BT-80UBW.jpg) | |
 | POS-5890F | ![POS-5890F](../printers_pictures/POS-5890F.jpg) | |
 | Epson TM-m30 | ![Epson TM-m30](../printers_pictures/Epson%20TM-m30.jpg) | |
+| SAT 38TUSE | ![SAT 38TUSE](../printers_pictures/SAT_38TUSE.png) | |
+| EPSON TM-20 | ![EPSON TM-20](../printers_pictures/EPSON%20TM-20.png) | |
+| Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001 | ![Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001](../printers_pictures/EPSON%20TM-20_2.jpg) | |
