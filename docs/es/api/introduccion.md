@@ -7,6 +7,19 @@ y tu código en consecuencia.
 La API se comunica a través de JSON. Aceptará y responderá
 con JSON.
 
+## API local, no requiere internet
+Este servidor HTTP a ESC POS funciona totalmente fuera
+de línea, ejecuta un servidor HTTP en tu propia computadora
+y no necesita internet
+
+:::warning
+Si usas esta API desde el navegador web, asegúrate de invocarla
+desde localhost o desde un sitio con https. De otra manera no funcionará
+
+Para imprimir en red, revisa cómo [usar el plugin como proxy](../api/reenviar.md)
+
+:::
+
 ## Lenguajes de programación
 Los ejemplos proporcionados están escritos en JavaScript
 del lado del cliente, pero puedes llamar al plugin desde cualquier

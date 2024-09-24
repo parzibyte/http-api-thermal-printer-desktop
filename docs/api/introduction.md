@@ -7,6 +7,19 @@ your code accordingly
 The API communicates through JSON. It will accept and answer
 with JSON
 
+## Local API, no internet required
+This HTTP to ESC POS API works offline, it executes
+a HTTP server in your own computer, does not require
+internet access.
+
+:::warning
+If you call this API from the browser, make sure you
+call it from localhost or a site with https, otherwise
+it won't work.
+
+To print on LAN, check [Lan printing](../api/forward.md)
+:::
+
 ## Programming languages
 The examples provided are written with JavaScript
 client-side, but you can call the plugin from any
