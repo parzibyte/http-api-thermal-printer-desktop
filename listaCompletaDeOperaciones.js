@@ -328,6 +328,24 @@ export const operacionesDisponibles = [
         "argumentos": []
     },
     {
+        "id": 16,
+        "nombre": "DeshabilitarElModoDeCaracteresChinos",
+        nombre_corto: "Deshabilitar el modo de caracteres chinos",
+        nombre_corto_ingles: "Disable chinese character mode",
+        "descripcion": "Deshabilitar el modo de caracteres chinos. Útil para imprimir tildes y texto en español en impresoras térmicas chinas. Combínalo con TextoSegunPaginaDeCodigos",
+        "descripcion_ingles": "Disable chinese character mode. Use it when printing diacritic text and you have a chinese printer. Use it along with TextoSegunPaginaDeCodigos",
+        "argumentos": []
+    },
+    {
+        "id": 16,
+        "nombre": "HabilitarElModoDeCaracteresChinos",
+        nombre_corto: "Habilitar el modo de caracteres chinos",
+        nombre_corto_ingles: "Enable chinese character mode",
+        "descripcion": "Habilitar el modo de caracteres chinos",
+        "descripcion_ingles": "Enable chinese character mode",
+        "argumentos": []
+    },
+    {
         "id": 17,
         "nombre": "DefinirCaracterPersonalizado",
         nombre_corto: "Definir caracter personalizado",
