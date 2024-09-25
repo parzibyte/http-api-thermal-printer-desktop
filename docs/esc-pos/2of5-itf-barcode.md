@@ -47,7 +47,7 @@ Print a barcode on TWO of Five Itf format (interleaved 2 of 5). The algorithm re
 
 **Type:** `float64`
 
-**Example:** `20`
+**Example:** `80`
 
 ### Barcode width (`argumentos[3]`)
 
@@ -91,7 +91,7 @@ Don't forget to check every argument type
         "argumentos": [
             "50123452",
             false,
-            20,
+            80,
             380,
             0
         ]
@@ -120,7 +120,7 @@ const payload = {
         "argumentos": [
           "50123452",
           false,
-          20,
+          80,
           380,
           0
         ]
@@ -157,7 +157,7 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
         "argumentos": [
           "50123452",
           false,
-          20,
+          80,
           380,
           0
         ]
@@ -171,5 +171,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasTwoOfFiveITF","argumentos":["50123452",false,20,380,0]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasTwoOfFiveITF","argumentos":["50123452",false,80,380,0]}]}
 ```

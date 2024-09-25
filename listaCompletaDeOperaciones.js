@@ -708,14 +708,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -754,14 +754,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -814,12 +814,12 @@ export const operacionesDisponibles = [
             },
             {
                 "id": 44,
-                "nombre": "alto",
+                "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Alto del código de barras",
-                "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "descripcion": "Ancho del código de barras",
+                "descripcion_ingles": "Barcode width",
+                "ejemplo": 380,
+                "ejemplo_ingles": 380
             },
             {
                 "id": 21,
@@ -855,14 +855,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -901,14 +901,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -946,14 +946,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -991,14 +991,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -1046,14 +1046,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -1092,14 +1092,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380
@@ -1138,14 +1138,14 @@ export const operacionesDisponibles = [
                 "tipo": "float64",
                 "descripcion": "Alto del código de barras",
                 "descripcion_ingles": "Barcode height",
-                "ejemplo": 20,
-                "ejemplo_ingles": 20
+                "ejemplo": 80,
+                "ejemplo_ingles": 80
             },
             {
                 "id": 45,
                 "nombre": "ancho",
                 "tipo": "float64",
-                "descripcion": "Barcode width",
+                "descripcion": "Ancho del código de barras",
                 "descripcion_ingles": "Barcode width",
                 "ejemplo": 380,
                 "ejemplo_ingles": 380

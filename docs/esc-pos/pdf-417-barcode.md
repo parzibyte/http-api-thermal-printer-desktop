@@ -49,17 +49,17 @@ Print a barcode in PDF417 format. The algorithm refers to the algorithm used to 
 
 **Example:** `80`
 
-### Barcode height (`argumentos[3]`)
+### Barcode width (`argumentos[3]`)
 
 
 
-**Description:** Barcode height
+**Description:** Barcode width
 
 **Index:** `3`
 
 **Type:** `float64`
 
-**Example:** `20`
+**Example:** `380`
 
 ### Algorithm to convert image to ESC POS bytes (0, 1 o 2) (`argumentos[4]`)
 
@@ -92,7 +92,7 @@ Don't forget to check every argument type
             "50123452",
             1,
             80,
-            20,
+            380,
             0
         ]
 }
@@ -121,7 +121,7 @@ const payload = {
           "50123452",
           1,
           80,
-          20,
+          380,
           0
         ]
       }
@@ -158,7 +158,7 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
           "50123452",
           1,
           80,
-          20,
+          380,
           0
         ]
       }
@@ -171,5 +171,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,20,0]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,380,0]}]}
 ```

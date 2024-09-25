@@ -44,13 +44,13 @@ Imprime un código de barras en formato Two of five ITF (Entrelazados 2 de 5). E
 
 **Tipo:** `float64`
 
-**Ejemplo:** `20`
+**Ejemplo:** `80`
 
-### Barcode width (`argumentos[3]`)
+### Ancho del código de barras (`argumentos[3]`)
 
 
 
-**Descripción:** Barcode width
+**Descripción:** Ancho del código de barras
 
 **Índice:** `3`
 
@@ -85,7 +85,7 @@ No olvides revisar el tipo de dato de cada argumento
     "argumentos": [
       "50123452",
       false,
-      20,
+      80,
       380,
       0
     ]
@@ -115,7 +115,7 @@ const cargaUtil = {
         "argumentos": [
           "50123452",
           false,
-          20,
+          80,
           380,
           0
         ]
@@ -152,7 +152,7 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
         "argumentos": [
           "50123452",
           false,
-          20,
+          80,
           380,
           0
         ]
@@ -166,5 +166,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasTwoOfFiveITF","argumentos":["50123452",false,20,380,0]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasTwoOfFiveITF","argumentos":["50123452",false,80,380,0]}]}
 ```

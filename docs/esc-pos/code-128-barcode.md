@@ -35,7 +35,7 @@ Print a bar code in CODE128 format. The algorithm refers to the algorithm used t
 
 **Type:** `float64`
 
-**Example:** `20`
+**Example:** `80`
 
 ### Barcode width (`argumentos[2]`)
 
@@ -78,7 +78,7 @@ Don't forget to check every argument type
         "nombre": "ImprimirCodigoDeBarrasCode128",
         "argumentos": [
             "D387266D",
-            20,
+            80,
             380,
             0
         ]
@@ -106,7 +106,7 @@ const payload = {
         "nombre": "ImprimirCodigoDeBarrasCode128",
         "argumentos": [
           "D387266D",
-          20,
+          80,
           380,
           0
         ]
@@ -142,7 +142,7 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
         "nombre": "ImprimirCodigoDeBarrasCode128",
         "argumentos": [
           "D387266D",
-          20,
+          80,
           380,
           0
         ]
@@ -156,5 +156,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode128","argumentos":["D387266D",20,380,0]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode128","argumentos":["D387266D",80,380,0]}]}
 ```

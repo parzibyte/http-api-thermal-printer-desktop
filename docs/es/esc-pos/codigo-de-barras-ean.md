@@ -32,13 +32,13 @@ Imprime un código de barras en formato Ean. El algoritmo se refiere al algoritm
 
 **Tipo:** `float64`
 
-**Ejemplo:** `20`
+**Ejemplo:** `80`
 
-### Barcode width (`argumentos[2]`)
+### Ancho del código de barras (`argumentos[2]`)
 
 
 
-**Descripción:** Barcode width
+**Descripción:** Ancho del código de barras
 
 **Índice:** `2`
 
@@ -72,7 +72,7 @@ No olvides revisar el tipo de dato de cada argumento
     "nombre": "ImprimirCodigoDeBarrasEan",
     "argumentos": [
       "5012345678900",
-      20,
+      80,
       380,
       0
     ]
@@ -101,7 +101,7 @@ const cargaUtil = {
         "nombre": "ImprimirCodigoDeBarrasEan",
         "argumentos": [
           "5012345678900",
-          20,
+          80,
           380,
           0
         ]
@@ -137,7 +137,7 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
         "nombre": "ImprimirCodigoDeBarrasEan",
         "argumentos": [
           "5012345678900",
-          20,
+          80,
           380,
           0
         ]
@@ -151,5 +151,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasEan","argumentos":["5012345678900",20,380,0]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasEan","argumentos":["5012345678900",80,380,0]}]}
 ```

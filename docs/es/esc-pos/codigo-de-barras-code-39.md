@@ -56,13 +56,13 @@ Imprime un código de barras en formato Code39. El algoritmo se refiere al algor
 
 **Tipo:** `float64`
 
-**Ejemplo:** `20`
+**Ejemplo:** `80`
 
-### Barcode width (`argumentos[4]`)
+### Ancho del código de barras (`argumentos[4]`)
 
 
 
-**Descripción:** Barcode width
+**Descripción:** Ancho del código de barras
 
 **Índice:** `4`
 
@@ -98,7 +98,7 @@ No olvides revisar el tipo de dato de cada argumento
       "D387266D",
       true,
       true,
-      20,
+      80,
       380,
       0
     ]
@@ -129,7 +129,7 @@ const cargaUtil = {
           "D387266D",
           true,
           true,
-          20,
+          80,
           380,
           0
         ]
@@ -167,7 +167,7 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
           "D387266D",
           true,
           true,
-          20,
+          80,
           380,
           0
         ]
@@ -181,5 +181,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode39","argumentos":["D387266D",true,true,20,380,0]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode39","argumentos":["D387266D",true,true,80,380,0]}]}
 ```

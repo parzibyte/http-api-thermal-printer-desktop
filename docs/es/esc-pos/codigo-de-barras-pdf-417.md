@@ -46,17 +46,17 @@ Imprime un código de barras en formato PDF417. El algoritmo se refiere al algor
 
 **Ejemplo:** `80`
 
-### Alto del código de barras (`argumentos[3]`)
+### Ancho del código de barras (`argumentos[3]`)
 
 
 
-**Descripción:** Alto del código de barras
+**Descripción:** Ancho del código de barras
 
 **Índice:** `3`
 
 **Tipo:** `float64`
 
-**Ejemplo:** `20`
+**Ejemplo:** `380`
 
 ### Algoritmo para convertir imagen a bytes ESC POS (0, 1 o 2) (`argumentos[4]`)
 
@@ -86,7 +86,7 @@ No olvides revisar el tipo de dato de cada argumento
       "50123452",
       1,
       80,
-      20,
+      380,
       0
     ]
 }
@@ -116,7 +116,7 @@ const cargaUtil = {
           "50123452",
           1,
           80,
-          20,
+          380,
           0
         ]
       }
@@ -153,7 +153,7 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
           "50123452",
           1,
           80,
-          20,
+          380,
           0
         ]
       }
@@ -166,5 +166,5 @@ Codifica el siguiente JSON y envíalo a `http://localhost:8000/imprimir` con el 
 Envía esta cadena JSON ya codificada a `http://localhost:8000/imprimir` con el método POST
 
 ```
-{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,20,0]}]}
+{"serial":"","nombreImpresora":"Nombre_impresora","operaciones":[{"nombre":"ImprimirCodigoDeBarrasPdf417","argumentos":["50123452",1,80,380,0]}]}
 ```

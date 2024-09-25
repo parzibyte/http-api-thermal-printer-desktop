@@ -59,7 +59,7 @@ Print a bar code in CODE39 format. The algorithm refers to the algorithm used to
 
 **Type:** `float64`
 
-**Example:** `20`
+**Example:** `80`
 
 ### Barcode width (`argumentos[4]`)
 
@@ -104,7 +104,7 @@ Don't forget to check every argument type
             "D387266D",
             true,
             true,
-            20,
+            80,
             380,
             0
         ]
@@ -134,7 +134,7 @@ const payload = {
           "D387266D",
           true,
           true,
-          20,
+          80,
           380,
           0
         ]
@@ -172,7 +172,7 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
           "D387266D",
           true,
           true,
-          20,
+          80,
           380,
           0
         ]
@@ -186,5 +186,5 @@ Encode this JSON and send it to `http://localhost:8000/imprimir` with POST metho
 Send this JSON string to `http://localhost:8000/imprimir` with POST method
 
 ```
-{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode39","argumentos":["D387266D",true,true,20,380,0]}]}
+{"serial":"","nombreImpresora":"Printers_name","operaciones":[{"nombre":"ImprimirCodigoDeBarrasCode39","argumentos":["D387266D",true,true,80,380,0]}]}
 ```
