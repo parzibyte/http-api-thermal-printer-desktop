@@ -11,12 +11,12 @@ A veces el navegador web o el sistema operativo bloquea la descarga. Si los enla
 ## Windows 64 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.0_W64.zip`
+**Nombre del archivo:** `ESC_POS_3.5.1_W64.zip`
 
-**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip)
+**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip)
 
 ```plaintext title="Enlace directo"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W64.zip
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip
 ```
 
 :::tip
@@ -29,12 +29,12 @@ puedes detenerlo desde el administrador de tareas
 ## Windows 32 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.0_W32.zip`
+**Nombre del archivo:** `ESC_POS_3.5.1_W32.zip`
 
-**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W32.zip)
+**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip)
 
 ```plaintext title="Enlace directo"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_W32.zip
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip
 ```
 :::tip
 Si tiene una DLL, mantén dicha DLL junto con el plugin. Extrae el archivo, ejecuta el archivo del plugin. No debería abrir ninguna ventana,

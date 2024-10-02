@@ -80,7 +80,9 @@ export default defineUserConfig({
               '/es/esc-pos/codigo-de-barras-itf.md',
               '/es/esc-pos/codigo-de-barras-codabar.md',
               '/es/esc-pos/codigo-de-barras-code-128.md',
-              '/es/esc-pos/codigo-qr.md'
+              '/es/esc-pos/codigo-qr.md',
+              '/es/esc-pos/sonido.md',
+              '/es/esc-pos/sonido-y-notificacion.md'
             ],
           },
           "/es/area-pruebas",
@@ -132,7 +134,9 @@ export default defineUserConfig({
             '/es/esc-pos/codigo-de-barras-itf.md',
             '/es/esc-pos/codigo-de-barras-codabar.md',
             '/es/esc-pos/codigo-de-barras-code-128.md',
-            '/es/esc-pos/codigo-qr.md'
+            '/es/esc-pos/codigo-qr.md',
+            '/es/esc-pos/sonido.md',
+            '/es/esc-pos/sonido-y-notificacion.md'
           ],
           "/es/guia/": [
             {
@@ -197,7 +201,9 @@ export default defineUserConfig({
               '/esc-pos/2of5-itf-barcode.md',
               '/esc-pos/codabar-barcode.md',
               '/esc-pos/code-128-barcode.md',
-              '/esc-pos/qr-code.md'
+              '/esc-pos/qr-code.md',
+              '/esc-pos/beep.md',
+              '/esc-pos/beeper-and-alarm-notification.md'
             ],
           },
           "/playground",
@@ -240,7 +246,9 @@ export default defineUserConfig({
             '/esc-pos/2of5-itf-barcode.md',
             '/esc-pos/codabar-barcode.md',
             '/esc-pos/code-128-barcode.md',
-            '/esc-pos/qr-code.md'
+            '/esc-pos/qr-code.md',
+            '/esc-pos/beep.md',
+            '/esc-pos/beeper-and-alarm-notification.md'
           ],
           "/guide/": ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",],
           "/api/": [

@@ -1206,5 +1206,63 @@ export const operacionesDisponibles = [
                 "ejemplo_ingles": 0
             },
         ]
+    },
+    {
+        "nombre": "Beep",
+        nombre_corto: "Sonido",
+        nombre_corto_ingles: "Beep",
+        "descripcion": "Emite un sonido usando el buzzer (zumbador) de la impresora térmica. Hace un pitido. Mira también BeepAndSound",
+        "descripcion_ingles": "Beeps the buzzer. Produces a sound in the thermal printer. Also take a look at BeepAndSound",
+        "argumentos": [
+            {
+                "nombre": "cantidadTonos",
+                "tipo": "float64",
+                "descripcion": "Cantidad de sonidos (cuántas veces hacer beep)",
+                "descripcion_ingles": "Beep count (how many times beep)",
+                "ejemplo": 3,
+                "ejemplo_ingles": 3,
+            },
+            {
+                "nombre": "duracionEntreTonos",
+                "tipo": "float64",
+                "descripcion": "Duración de cada sonido. La documentación no deja claro si es la duración entre cada sonido o la duración de cada sonido, y al parecer este parámetro no tiene efecto en mi impresora térmica (GOOJPRT PT-210). Se supone que esta duración será multiplicada por 50 ms",
+                "descripcion_ingles": "Beep time. Docs does not specify if this parameter indicates time between each beep or duration of each beep. It looks like this parameter does not have effect on my thermal printer (GOOJPRT PT-210). This parameter will be multiplied by 50ms",
+                "ejemplo": 2,
+                "ejemplo_ingles": 2,
+            },
+        ]
+    },
+    {
+        "nombre": "BeepAndAlarm",
+        nombre_corto: "Sonido y notificación",
+        nombre_corto_ingles: "Beeper and alarm notification",
+        "descripcion": "Emite un sonido usando el buzzer (zumbador) de la impresora térmica (hace un pitido) y también enciende el LED integrado (alarma). Sirve para emitir un sonido y notificar algo. En mi impresora, Beep no respeta la duración del sonido, pero BeepAndAlarm sí lo hace. Con esta operación puedes únicamente emitir un sonido, encender el LED silenciosamente, ambos o ninguno",
+        "descripcion_ingles": "Beeps the buzzer (Produces a sound in the thermal printer) and turns on the integrated LED (alarm). It is useful for making a beep and notify something. In my printer, Beep ignores the duration of the sound, but BeepAndAlarm takes it into account. With this operation, you can either emit a sound, silently turn on the LED, both, or neither.",
+        "argumentos": [
+            {
+                "nombre": "cantidadTonos",
+                "tipo": "float64",
+                "descripcion": "Cantidad de sonidos y alarmas (cuántas veces hacer beep y encender y apagar el LED)",
+                "descripcion_ingles": "Beep and alarm count (how many times beep and toggle LED)",
+                "ejemplo": 3,
+                "ejemplo_ingles": 3,
+            },
+            {
+                "nombre": "duracionEntreTonos",
+                "tipo": "float64",
+                "descripcion": "Duración de cada sonido y/o alarma. Este parámetro será multiplicado por 50ms",
+                "descripcion_ingles": "Duration of each beep and/or alarm. This parameter will be multiplied by 50ms.",
+                "ejemplo": 2,
+                "ejemplo_ingles": 2,
+            },
+            {
+                "nombre": "modo",
+                "tipo": "float64",
+                "descripcion": "Modo de notificación. 0 para no usar sonido ni alarma (LED). 1 para solamente emitir sonido, sin alarma (LED). 2 para solamente notificar a través de la alarma (LED) sin sonido. 3 para notificar con sonido (beep usando el buzzer o zumbador) y con alarma (LED)",
+                "descripcion_ingles": "Notification mode. 0 for no sound or alarm (LED). 1 for sound only, no alarm (LED). 2 for alarm (LED) only, no sound. 3 for both sound (beep using the buzzer) and alarm (LED).",
+                "ejemplo": 3,
+                "ejemplo_ingles": 3,
+            },
+        ]
     }
 ];
