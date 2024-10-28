@@ -26,3 +26,4 @@ mean that it is not compatible
 | SAT 38TUSE | ![SAT 38TUSE](./printers_pictures/SAT_38TUSE.png) | |
 | EPSON TM-20 | ![EPSON TM-20](./printers_pictures/EPSON%20TM-20.png) | |
 | Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001 | ![Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001](./printers_pictures/EPSON%20TM-20_2.jpg) | |
+| Epson TM-T20III| ![Epson TM-T20III](./printers_pictures/Epson%20TM-T20III.jpg) | |
