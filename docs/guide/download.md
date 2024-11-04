@@ -55,18 +55,18 @@ parzibyte@raspberrypi:~ $ getconf LONG_BIT
 64
 ```
 
-**Filename:** `ESC_POS_3.5.0_RPIARMV64.zip`
+**Filename:** `ESC_POS_3.5.1_RPIARMV64.zip`
 
-**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_RPIARMV64.zip)
+**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_RPIARMV64.zip)
 
 ```plaintext title="Direct link"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_RPIARMV64.zip
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_RPIARMV64.zip
 ```
 
 ### Running plugin
 On a terminal navigate to the plugin dir. Then run `./plugin_name`, for example:
 ```bash
-parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_RPIARMV64
+parzibyte@gigabytepc:~$ ./ESC_POS_3.5.1_RPIARMV64
 ```
 
 
@@ -86,16 +86,16 @@ parzibyte@gigabytepc:~$ getconf LONG_BIT
 Sometimes it may be necessary to give the plugin
 execution permission with `sudo chmod +x ./plugin_name`
 
-**Filename:** `ESC_POS_3.5.0_Linux64.zip`
+**Filename:** `ESC_POS_3.5.1_Linux64.zip`
 
-**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_Linux64.zip)
+**Download**: [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_Linux64.zip)
 
 ```plaintext title="Direct link"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.0/ESC_POS_3.5.0_Linux64.zip
+https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_Linux64.zip
 ```
 
 ### Running plugin
 On a terminal navigate to the plugin dir. Then run `./plugin_name`, for example:
 ```bash
-parzibyte@gigabytepc:~$ ./ESC_POS_3.5.0_Linux64
+parzibyte@gigabytepc:~$ ./ESC_POS_3.5.1_Linux64
 ```
