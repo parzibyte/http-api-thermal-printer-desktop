@@ -4,6 +4,16 @@ import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
   base: "/http-esc-pos-desktop-docs/",
+  head: [
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-WGMGDHLMZ6' }],
+
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-WGMGDHLMZ6');
+    `],
+  ],
   locales: {
     "/es/": {
       lang: "es",
