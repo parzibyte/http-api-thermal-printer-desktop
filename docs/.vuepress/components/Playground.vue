@@ -13,7 +13,6 @@ const i18n = useI18n();
 import { operacionesDisponibles } from '../../../listaCompletaDeOperaciones.js'
 const busqueda = ref("");
 const props = defineProps(['nombreOperacion', 'ocultarOperacionesDisponibles', 'urlBase'])
-
 const operacionesFiltradas = computed(() => {
     if (busqueda.value === "") {
         return operacionesDisponibles;
@@ -54,9 +53,10 @@ const obtenerJsonCodificado = computed(() => {
     return JSON.stringify(obtenerJsonResultante.value);
 });
 const obtenerJsonResultante = computed(() => {
+    const verdaderaImpresora = detallesPlugin.value.plataforma === "Desktop" ? impresoraSeleccionada.value : impresoraSeleccionada.value.mac;
     const jsonResultante = {
         serial: licencia.value,
-        nombreImpresora: impresoraSeleccionada.value,
+        nombreImpresora: verdaderaImpresora,
         operaciones: operacionesElegidasPorUsuario.value.map(operacion => {
             return {
                 nombre: operacion.nombre,
@@ -350,26 +350,32 @@ const enlaceOperacion = (operacion) => {
 }
 
 const deberiaMostrarListaCompleta = ref(true);
+const toStringParaImpresora = (impresora) => {
+    if (detallesPlugin.value.plataforma === "Desktop") {
+        return impresora;
+    } else {
+        return `${impresora.name} (${impresora.mac} ${impresora.type})`
+    }
+}
 </script>
 <template>
     <div class="flex flex-col">
         <div>
             <div class="dark:bg-green-700 dark:text-slate-300 bg-green-400 text-white p-2 rounded-md"
-                v-if="detallesPlugin.plataforma === 'Desktop'">
+                v-if="detallesPlugin.plataforma === 'Desktop' || detallesPlugin.plataforma === 'Android'">
                 <strong>{{ $t("versionPlugin") }}: </strong> {{ detallesPlugin.plataforma }} {{ detallesPlugin.version
                 }}
             </div>
             <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 text-white p-2 rounded-md"
-                v-if="!detallesPlugin.plataforma || detallesPlugin.plataforma !== 'Desktop' || mensajeErrorVersion">
+                v-if="!detallesPlugin.plataforma || (detallesPlugin.plataforma !== 'Desktop' && detallesPlugin.plataforma !== 'Android') || mensajeErrorVersion">
                 {{ $t("pluginNoDetectado") }} {{ mensajeErrorVersion }}
                 <br>
                 <a class="dark:text-gray-200 text-white" :href="enlaceDescargarPlugin()">{{ $t("guiaDescarga") }}</a>
             </div>
             <MiInput v-model="url" label="URL"></MiInput>
             <MiInput v-model="licencia" :label="$t('licencia')"></MiInput>
-            <SelectSimple :toString="(nombreImpresora) => nombreImpresora"
-                :mensajeValidacion="mensajeValidacionImpresora" v-model="impresoraSeleccionada"
-                :label="$t('seleccionaImpresora')" :elementos="impresoras">
+            <SelectSimple :toString="toStringParaImpresora" :mensajeValidacion="mensajeValidacionImpresora"
+                v-model="impresoraSeleccionada" :label="$t('seleccionaImpresora')" :elementos="impresoras">
             </SelectSimple>
             <div class="dark:bg-red-700 dark:text-gray-200 bg-red-500 p-2 rounded text-white mb-2"
                 v-if="impresoras.length <= 0">
