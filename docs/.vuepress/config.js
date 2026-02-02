@@ -92,7 +92,8 @@ export default defineUserConfig({
               '/es/esc-pos/codigo-de-barras-code-128.md',
               '/es/esc-pos/codigo-qr.md',
               '/es/esc-pos/sonido.md',
-              '/es/esc-pos/sonido-y-notificacion.md'
+              '/es/esc-pos/sonido-y-notificacion.md',
+              '/es/esc-pos/interlineado.md'
             ],
           },
           "/es/area-pruebas",
@@ -146,7 +147,8 @@ export default defineUserConfig({
             '/es/esc-pos/codigo-de-barras-code-128.md',
             '/es/esc-pos/codigo-qr.md',
             '/es/esc-pos/sonido.md',
-            '/es/esc-pos/sonido-y-notificacion.md'
+            '/es/esc-pos/sonido-y-notificacion.md',
+            '/es/esc-pos/interlineado.md',
           ],
           "/es/guia/": [
             {
@@ -213,7 +215,8 @@ export default defineUserConfig({
               '/esc-pos/code-128-barcode.md',
               '/esc-pos/qr-code.md',
               '/esc-pos/beep.md',
-              '/esc-pos/beeper-and-alarm-notification.md'
+              '/esc-pos/beeper-and-alarm-notification.md',
+              '/esc-pos/line-spacing.md',
             ],
           },
           "/playground",
@@ -258,7 +261,8 @@ export default defineUserConfig({
             '/esc-pos/code-128-barcode.md',
             '/esc-pos/qr-code.md',
             '/esc-pos/beep.md',
-            '/esc-pos/beeper-and-alarm-notification.md'
+            '/esc-pos/beeper-and-alarm-notification.md',
+            '/esc-pos/line-spacing.md',
           ],
           "/guide/": ["/guide/introduction.md", "/guide/download.md", "/guide/install-share-printer.md", "/guide/hello-printer.md",],
           "/api/": [

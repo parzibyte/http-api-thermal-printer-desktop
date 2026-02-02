@@ -1264,5 +1264,22 @@ export const operacionesDisponibles = [
                 "ejemplo_ingles": 3,
             },
         ]
+    },
+    {
+        "nombre": "EstablecerInterlineado",
+        nombre_corto: "Interlineado",
+        nombre_corto_ingles: "Line spacing",
+        "descripcion": "Permite cambiar el espacio entre líneas (interlineado vertical)",
+        "descripcion_ingles": "Allows to change the spacing between lines (vertical line spacing)",
+        "argumentos": [
+            {
+                "nombre": "nuevoInterlineado",
+                "tipo": "float64",
+                "descripcion": "Distancia entre líneas, debe estar entre 0 y 255. Entre más grande, más espacio vertical entre líneas",
+                "descripcion_ingles": "Line spacing. Must be between 0 and 255. The larger the value, the more vertical space between lines.",
+                "ejemplo": 0,
+                "ejemplo_ingles": 0,
+            },
+        ]
     }
 ];
