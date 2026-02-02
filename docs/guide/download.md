@@ -13,12 +13,12 @@ and choose the right file on the **Assets** section, or copy the direct link. No
 ## Windows 64 bits
 Working with Windows 8, 8.1, 10 and 11
 
-**Filename:** `ESC_POS_3.5.1_W64.zip`
+**Filename:** `ESC_POS_3.5.3_W64.zip`
 
-**Download:** [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip)
+**Download:** [Download](https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip)
 
 ```plaintext title="Direct link"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip
+https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip
 ```
 
 :::tip
@@ -31,12 +31,12 @@ not open any window and you can close it from the task manager
 ## Windows 32 bits
 Working with Windows 8, 8.1, 10 and 11
 
-**Filename:** `ESC_POS_3.5.1_W32.zip`
+**Filename:** `ESC_POS_3.5.3_W32.zip`
 
-**Download:** [Download](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip)
+**Download:** [Download](https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip)
 
 ```plaintext title="Direct link"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip
+https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip
 ```
 
 :::tip

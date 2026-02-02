@@ -5,18 +5,19 @@ descargar y ejecutar el plugin HTTP a ESC POS de acuerdo
 a tu plataforma.
 
 :::tip
-A veces el navegador web o el sistema operativo bloquea la descarga. Si los enlaces directos no funcionan, intenta ir a la [release](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/tag/3.5.1) y elige el archivo correcto en **Assets** o copia el enlace directo. Ninguno de mis archivos contienen virus.
+A veces el navegador web o el sistema operativo bloquea la descarga. Si los enlaces directos no funcionan, intenta 
+copiar el enlace y pegarlo en la barra de direcciones. Es tu obligacion forzar al navegador. Ninguno de mis archivos contienen virus.
 :::
 
 ## Windows 64 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.1_W64.zip`
+**Nombre del archivo:** `ESC_POS_3.5.3_W64.zip`
 
-**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip)
+**Descarga**: [Descargar](https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip)
 
 ```plaintext title="Enlace directo"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W64.zip
+https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip
 ```
 
 :::tip
@@ -29,12 +30,12 @@ puedes detenerlo desde el administrador de tareas
 ## Windows 32 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.1_W32.zip`
+**Nombre del archivo:** `ESC_POS_3.5.3_W32.zip`
 
-**Descarga**: [Descargar](https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip)
+**Descarga**: [Descargar](https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip)
 
 ```plaintext title="Enlace directo"
-https://github.com/parzibyte/plugin-impresora-termica-v3/releases/download/3.5.1/ESC_POS_3.5.1_W32.zip
+https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip
 ```
 :::tip
 Si tiene una DLL, mantén dicha DLL junto con el plugin. Extrae el archivo, ejecuta el archivo del plugin. No debería abrir ninguna ventana,

@@ -52,6 +52,9 @@ en `navbar` como en `sidebar`. Debes hacerlo en español e inglés. Los nombres
 de archivos se generan usando `nombre_corto` de `config.js` (raíz). Por ejemplo
 `Sonido y notificación` será `sonido-y-notificacion.md`
 
+# Actualizando enlace de descarga
+Modifica `docs/es/guia/descargar.md` y `docs/guide/download.md`
+
 # Generando operaciones
 
 `node generar.js`
