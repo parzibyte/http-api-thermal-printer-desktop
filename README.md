@@ -41,6 +41,17 @@ npm run docs:build
 3. Distribuye el contenido `docs\.vuepress\dist`. Recuerda que la base
 path se encuentra en `config.js`
 
+# Añadiendo operación
+Edita el archivo `listaCompletaDeOperaciones`
+y añade la nueva operación.
+
+Ejecuta `node generar.js`
+
+Modifica el menú en `docs/.vuepress/config.js`
+en `navbar` como en `sidebar`. Debes hacerlo en español e inglés. Los nombres
+de archivos se generan usando `nombre_corto` de `config.js` (raíz). Por ejemplo
+`Sonido y notificación` será `sonido-y-notificacion.md`
+
 # Generando operaciones
 
 `node generar.js`
