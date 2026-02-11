@@ -27,3 +27,5 @@ mean that it is not compatible
 | EPSON TM-20 | ![EPSON TM-20](./printers_pictures/EPSON%20TM-20.png) | |
 | Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001 | ![Miniprinter Epson Tmt20iii-001 Usb Serial Termica C31ch51001](./printers_pictures/EPSON%20TM-20_2.jpg) | |
 | Epson TM-T20III| ![Epson TM-T20III](./printers_pictures/Epson%20TM-T20III.jpg) | |
+| TechZone POS Impresora térmica de tickets modelo TZPOIMT01 | ![TechZone POS Impresora térmica de tickets modelo TZPOIMT01 - Descripción de modelo](./printers_pictures/TechZone_POS_TZPOIMT01.jpg) ![TechZone POS Impresora térmica de tickets modelo TZPOIMT01 ticket impreso](./printers_pictures/TechZone_POS_TZPOIMT01_Ticket.jpg)| |
+| Impresora térmica Techmar FK-POS80CC-II | ![Impresora térmica Techmar FK-POS80CC-II ](./printers_pictures/Impresora%20térmica%20Techmar%20FK-POS80CC-II_1.jpeg) ![Impresora térmica Techmar FK-POS80CC-II foto del modelo](./printers_pictures/Impresora%20térmica%20Techmar%20FK-POS80CC-II_2.png) ![Impresora térmica Techmar FK-POS80CC-II ticket impreso](./printers_pictures/Impresora%20térmica%20Techmar%20FK-POS80CC-II_3.jpeg) | |
