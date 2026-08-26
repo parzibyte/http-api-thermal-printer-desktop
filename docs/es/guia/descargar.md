@@ -12,12 +12,12 @@ copiar el enlace y pegarlo en la barra de direcciones. Es tu obligacion forzar a
 ## Windows 64 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.3_W64.zip`
+**Nombre del archivo:** `ESCPOSV3.5.4_W64.zip`
 
-**Descarga**: [Descargar](https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip)
+**Descarga**: [Descargar](https://parzibyte.me/compartir-archivos-app/#/descargar/d1561dac59c9b6624295b20fa2747d8fe668f9f44a8d2fd017dd2227ce426122)
 
 ```plaintext title="Enlace directo"
-https://parzibyte.me/static/ESC_POS_3.5.3_W64.zip
+https://parzibyte.me/compartir-archivos-app/#/descargar/d1561dac59c9b6624295b20fa2747d8fe668f9f44a8d2fd017dd2227ce426122
 ```
 
 :::tip
@@ -30,12 +30,12 @@ puedes detenerlo desde el administrador de tareas
 ## Windows 32 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 
-**Nombre del archivo:** `ESC_POS_3.5.3_W32.zip`
+**Nombre del archivo:** `ESCPOSV3.5.4_W32.zip`
 
-**Descarga**: [Descargar](https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip)
+**Descarga**: [Descargar](https://parzibyte.me/compartir-archivos-app/#/descargar/951b02260119e6ea8aba8285d3cdcf80734d6bfc30cd12a5c1ee5b98c73032b7)
 
 ```plaintext title="Enlace directo"
-https://parzibyte.me/static/ESC_POS_3.5.3_W32.zip
+https://parzibyte.me/compartir-archivos-app/#/descargar/951b02260119e6ea8aba8285d3cdcf80734d6bfc30cd12a5c1ee5b98c73032b7
 ```
 :::tip
 Si tiene una DLL, mantén dicha DLL junto con el plugin. Extrae el archivo, ejecuta el archivo del plugin. No debería abrir ninguna ventana,

@@ -1,5 +1,12 @@
 # Instalar y compartir tu impresora
 
+## Solo para versión 3.5.4 Windows en adelante
+A partir de la versión **3.5.4** ya no es necesario compartir la impresora
+ni instalarla como genérica. Simplemente **instala tu impresora como normalmente lo harías**, haz
+una prueba de impresión y debería funcionar con el plugin.
+
+Puedes leer el resto de esta página si no usas esta versión o estás en otro sistema operativo.
+
 ## Controladores
 
 Se recomienda instalar tu impresora como genérica, incluso si tienes los controladores.
