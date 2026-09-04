@@ -26,7 +26,16 @@ puedes detenerlo desde el administrador de tareas
 :::
 
 
+## Android
+Requiere al menos Android 5.0 Lollipop. Probado en Android 12, 13 y 16.
 
+**Nombre del archivo:** `HTTP2ESCPOSBT2.1.apk`
+
+**Descarga**: [Descargar](https://parzibyte.me/compartir-archivos-app/#/descargar/9eda7d1c255d247f8174c52c21978a4d1772011ff310d2a3883f050528b2b3b1)
+
+```plaintext title="Enlace directo"
+https://parzibyte.me/compartir-archivos-app/#/descargar/9eda7d1c255d247f8174c52c21978a4d1772011ff310d2a3883f050528b2b3b1
+```
 ## Windows 32 bits
 Funcionando con Windows 8, 8.1, 10 y 11
 

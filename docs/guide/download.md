@@ -27,6 +27,16 @@ not open any window and you can close it from the task manager
 :::
 
 
+## Android
+The plugin requires Android 5.0 Lollipop at least. Tested on Android 12, 13 and 16.
+
+**Filename:** `HTTP2ESCPOSBT2.1.apk`
+
+**Download**: [Download](https://parzibyte.me/compartir-archivos-app/#/descargar/9eda7d1c255d247f8174c52c21978a4d1772011ff310d2a3883f050528b2b3b1)
+
+```plaintext title="Direct link"
+https://parzibyte.me/compartir-archivos-app/#/descargar/9eda7d1c255d247f8174c52c21978a4d1772011ff310d2a3883f050528b2b3b1
+```
 
 ## Windows 32 bits
 Working with Windows 8, 8.1, 10 and 11
